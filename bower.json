@@ -1,0 +1,24 @@
+{
+  "name": "AngularBootstrapDateTimePicker",
+  "authors": [
+    "Marc Magon <ged_marc@hotmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/META-INF/resources/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-bootstrap-datetimepicker": "https://github.com/dalelotts/angular-bootstrap-datetimepicker.git#*",
+    "angular-date-time-input": "https://github.com/dalelotts/angular-date-time-input.git#*",
+    "tempusdominus-core":"*"
+  }
+}
