@@ -28,15 +28,7 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum BS4DateTimePickerReferencePool implements ReferencePool
 {
-	BootstrapDateTimePickerReference(new JavascriptReference("datetimepickerref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"),
-	                                 new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/css/datetimepicker.css")),
-	BootstrapDateTimeInputReference(new JavascriptReference("datetimepickerinputref", 1.0, "bower_components/angular-date-time-input/src/dateTimeInput.js"),
-	                                //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
-	                                null),
-	BootstrapDateTimeInputTemplatesReference(new JavascriptReference("datetimepickertemplateref", 1.0, "bower_components/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"),
-	                                         //    new CSSReference("BSDateTimePickerReference", 1.0, "bower_components/angular-date-time-input/src/datetimepicker.css")
-	                                         null),
-	NoReference(null, null);
+	TempusDominusReference(new JavascriptReference("tempusdominusreference", 1.0, "bower_components/tempusdominus-core/build/js/core.min.js"),null);
 	/**
 	 * The actual javascript
 	 */

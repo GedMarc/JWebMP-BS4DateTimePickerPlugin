@@ -16,10 +16,15 @@
  */
 package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
+import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.plugins.bs4datetimedropdown.BS4DateTimePageConfigurator;
+import za.co.mmagon.jwebswing.base.html.DivSimple;
+import za.co.mmagon.jwebswing.base.html.Span;
+import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
-import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
+import za.co.mmagon.jwebswing.plugins.bootstrap.forms.groups.sets.BSFormInputGroup;
+import za.co.mmagon.jwebswing.plugins.fontawesome.FontAwesome;
+import za.co.mmagon.jwebswing.plugins.fontawesome.FontAwesomeIcons;
 
 /**
  * An implementation of
@@ -31,8 +36,9 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSInput;
  * @version 1.0
  * @since 17 Jan 2017
  */
-public class BS4DateTimePicker<J extends BS4DateTimePicker>
-		extends BSInput//<BS4DateTimePickerChildren, BS4DateTimePickerAttributes, BS4DateTimePickerFeatures, BS4DateTimePickerEvents, J>
+@ComponentInformation(name = "BS 4 Date Time Picker",description = "The Tempus Dominus Bootstrap Date Time Picker",url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
+public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
+		extends BSFormInputGroup<J>
 		implements BSDropDownMenuChildren
 {
 	
@@ -42,17 +48,61 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker>
 	 */
 	private BS44DateTimePickerFeature feature;
 	
+	private final Span calendarSelectSpan = new Span();
+	private FontAwesomeIcons calendarIcon = FontAwesomeIcons.calendar;
+	
+	/**
+	 * Constructs a new instance
+	 *
+	 */
+	public BS4DateTimeInputGroup()
+	{
+		this("variable.name");
+	}
+	
 	/**
 	 * Constructs a new instance
 	 *
 	 * @param variableName
 	 */
-	public BS4DateTimePicker(String variableName)
+	public BS4DateTimeInputGroup(String variableName)
 	{
-		setTag("datetimepicker");
+		super(new BS4DateTimeInput(variableName));
+		getInput().bind(variableName);
+		addAttribute("data-target-input","nearest");
+		addClass("date");
+	}
+	
+	
+	/**
+	 * Returns the holder of the icon
+	 * @return
+	 */
+	public Span getCalendarSelectSpan()
+	{
+		return calendarSelectSpan;
+	}
+	
+	public FontAwesomeIcons getCalendarIcon()
+	{
+		return calendarIcon;
+	}
+	
+	public void setCalendarIcon(FontAwesomeIcons calendarIcon)
+	{
+		this.calendarIcon = calendarIcon;
+	}
+	
+	/**
+	 * Returns the options if any is required
+	 *
+	 * @return
+	 */
+	@Override
+	public DivSimple<J> bind(String variableName)
+	{
 		addAttribute(AngularAttributes.ngModel, variableName);
-		BS4DateTimePageConfigurator.setBSDateTimeRequired(this, true);
-		//setInlineClosingTag(true);
+		return this;
 	}
 	
 	/**
@@ -65,6 +115,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker>
 	public J setRequired(boolean required)
 	{
 		addAttribute(AngularAttributes.ngRequired, required + "");
+		addAttribute("required","");
 		return (J) this;
 	}
 	
@@ -80,6 +131,20 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker>
 			feature = new BS44DateTimePickerFeature(this);
 		}
 		return feature;
+	}
+	
+	@Override
+	public void preConfigure()
+	{
+		if(!isConfigured())
+		{
+			getInput().addAttribute("data-target",calendarSelectSpan.getID(true));
+			getCalendarSelectSpan().addAttribute("data-toggle",getInput().getID());
+			
+			getCalendarSelectSpan().add((ComponentHierarchyBase)new FontAwesome(getCalendarIcon()).setTag("span"));
+			getInputGroupAddonsRight().add(getCalendarSelectSpan());
+		}
+		super.preConfigure();
 	}
 	
 	/**

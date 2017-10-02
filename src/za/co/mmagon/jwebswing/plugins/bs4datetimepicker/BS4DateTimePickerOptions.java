@@ -17,7 +17,6 @@
 package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavascriptPartType;
 
 /**
  * All the options
@@ -34,6 +33,8 @@ public class BS4DateTimePickerOptions extends JavaScriptPart
 	
 	private static final long serialVersionUID = 1L;
 	
+	
+	
 	/**
 	 * The options for the component
 	 */
@@ -42,15 +43,5 @@ public class BS4DateTimePickerOptions extends JavaScriptPart
 	
 	}
 	
-	/**
-	 * Render as javascript
-	 *
-	 * @return
-	 */
-	@Override
-	public JavascriptPartType getJavascriptType()
-	{
-		return JavascriptPartType.Javascript;
-	}
-
+	
 }

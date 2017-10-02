@@ -14,9 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimedropdown;
+package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
-import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
@@ -25,20 +24,20 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
  * @author GedMarc
  * @since 22 Feb 2017
  */
-@PluginInformation(pluginName = "BS Date Time Picker",
-		pluginUniqueName = "bootstrap-datepicker",
-		pluginDescription = "Native AngularJS datetime picker directive styled by Twitter Bootstrap",
-		pluginVersion = "BS 3.3.7 / 4a6",
-		pluginDependancyUniqueIDs = "jquery,bootstrap,angular,moment,glyphicons",
+@PluginInformation(pluginName = "BS 4 Date Time Picker",
+		pluginUniqueName = "bootstrap4-datepicker",
+		pluginDescription = "Bootstrap 4 datetime picker directive styled by Twitter Bootstrap",
+		pluginVersion = "BS 4b1",
+		pluginDependancyUniqueIDs = "jquery,bootstrap,moment,glyphicons",
 		pluginCategories = "bootstrap,web ui,ui,framework,date picker",
-		pluginSubtitle = "A Bootstrap Date Time Picker controlled by Angular for intuitive data transfer and customized calendar templates.",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin",
-		pluginSourceUrl = "https://dalelotts.github.io/angular-bootstrap-datetimepicker/",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-BSDateTimePickerPlugin/wiki",
-		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BSDateTimePickerPlugin.jar/download",
+		pluginSubtitle = "A Bootstrap 4 Date Time Picker with intuitive data transfer and customized calendar templates.",
+		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-BSD4ateTimePickerPlugin",
+		pluginSourceUrl = "https://tempusdominus.github.io/bootstrap-4/",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin/wiki",
+		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BS4DateTimePickerPlugin.jar/download",
 		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
-		pluginLastUpdatedDate = "2017/03/04"
+		pluginLastUpdatedDate = "2017/10/01"
 )
 public class BS4DateTimePageConfigurator extends PageConfigurator
 {
@@ -51,23 +50,14 @@ public class BS4DateTimePageConfigurator extends PageConfigurator
 	
 	}
 	
-	public static void setBSDateTimeRequired(Component component, boolean required)
-	{
-		component.getProperties().put(BSDateTimeEnabled, true);
-	}
-	
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			if (page.getBody().readChildrenPropertyFirstResult(BSDateTimeEnabled, true))
-			{
-				page.getAngular().getAngularModules().add(new BSDateTimePickerAngularModule(page.getBody()));
-				page.getAngular().getAngularModules().add(new BS4DateTimePickerInputAngularModule(page.getBody()));
-			}
+			page.getBody().addJavaScriptReference(BS4DateTimePickerReferencePool.TempusDominusReference.getJavaScriptReference());
+			page.getBody().addCssReference(BS4DateTimePickerReferencePool.TempusDominusReference.getCssReference());
 		}
-		
 		return page;
 	}
 }

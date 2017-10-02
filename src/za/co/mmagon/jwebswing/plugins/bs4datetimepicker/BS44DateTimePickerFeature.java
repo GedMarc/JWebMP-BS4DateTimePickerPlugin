@@ -42,7 +42,7 @@ public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions,
 	 */
 	public BS44DateTimePickerFeature(Component forComponent)
 	{
-		super("Blank");
+		super("BS4DateTimePickerFeature");
 		setComponent(forComponent);
 	}
 	
@@ -65,7 +65,7 @@ public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions,
 	@Override
 	public void assignFunctionsToComponent()
 	{
-		String requiredString = getComponent().getJQueryID() + "blank(";
+		String requiredString = getComponent().getJQueryID() + "datetimepicker(";
 		requiredString += getOptions().toString();
 		requiredString += ");" + getNewLine();
 		addQuery(requiredString);
