@@ -16,6 +16,7 @@
  */
 package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
+import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
 import za.co.mmagon.jwebswing.base.html.DivSimple;
@@ -155,7 +156,8 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 	@Override
 	public BS4DateTimePickerOptions getOptions()
 	{
-		return getFeature().getOptions();
+		Feature f = (Feature) getInput().getFeatures().get(0);
+		return (BS4DateTimePickerOptions) f.getOptions();
 	}
 	
 	@Override

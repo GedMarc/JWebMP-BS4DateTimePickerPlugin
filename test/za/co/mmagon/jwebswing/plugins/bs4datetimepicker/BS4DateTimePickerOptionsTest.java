@@ -1,0 +1,19 @@
+package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
+
+import org.junit.jupiter.api.Test;
+import za.co.mmagon.BaseTestClass;
+
+import java.time.LocalDate;
+
+class BS4DateTimePickerOptionsTest extends BaseTestClass
+{
+	@Test
+	void getDate()
+	{
+		BS4DateTimePickerOptions options = new BS4DateTimePickerOptions();
+		options.setDate(LocalDate.now());
+		options.setFormat("L");
+		System.out.println(options);
+	}
+	
+}
