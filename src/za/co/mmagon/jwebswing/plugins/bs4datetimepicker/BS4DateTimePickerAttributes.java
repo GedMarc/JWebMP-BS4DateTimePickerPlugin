@@ -33,17 +33,8 @@ public enum BS4DateTimePickerAttributes implements AttributeDefinitions
 	BS4DateTimePickerAttributes()
 	{
 	}
-	
-	/**
-	 * If the attribute is loaded as a keyword only
-	 *
-	 * @param isKeyword
-	 */
-	BS4DateTimePickerAttributes(boolean isKeyword)
-	{
-		this.isKeyword = isKeyword;
-	}
-	
+
+
 	/**
 	 * If the attribute is a keyword
 	 *

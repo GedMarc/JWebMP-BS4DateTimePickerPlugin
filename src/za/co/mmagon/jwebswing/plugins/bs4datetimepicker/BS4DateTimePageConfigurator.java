@@ -44,10 +44,13 @@ public class BS4DateTimePageConfigurator extends PageConfigurator
 	
 	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
 	private static final long serialVersionUID = 1L;
-	
+
+	/**
+	 * Constructs a new instance of the BS4DateTimePicker
+	 */
 	public BS4DateTimePageConfigurator()
 	{
-	
+		//Nothing Needed
 	}
 	
 	@Override

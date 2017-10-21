@@ -44,7 +44,6 @@ public class BS4DateTimeInput<J extends BS4DateTimeInput<J>>
 	private BS44DateTimePickerFeature feature;
 	
 	
-	
 	public BS4DateTimeInput()
 	{
 		this("variable.name");
@@ -71,7 +70,7 @@ public class BS4DateTimeInput<J extends BS4DateTimeInput<J>>
 	 */
 	public J setRequired(boolean required)
 	{
-		addAttribute(AngularAttributes.ngRequired, required + "");
+		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));
 		return (J) this;
 	}
 	

@@ -9,20 +9,60 @@ import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
  */
 public class BS4DateTimeWidgetPositioningOptions extends JavaScriptPart<BS4DateTimeWidgetPositioningOptions>
 {
+	/**
+	 * Place the time widget on the x
+	 */
 	private BS4DateTimeWidgetPositions horizontal;
+	/**
+	 * Place the time widget on the y
+	 */
 	private BS4DateTimeWidgetPositions vertical;
-	
+
+	/**
+	 * Constructs a new instance of the BS4DateTimeWidgetPositioningOptions
+	 */
 	public BS4DateTimeWidgetPositioningOptions()
 	{
+		//Nothing Needed
 	}
-	
+
+	/**
+	 * Place the time widget on the y
+	 * @return
+	 */
 	public BS4DateTimeWidgetPositions getVertical()
 	{
 		return vertical;
 	}
-	
+
+	/**
+	 * Place the time widget on the y
+	 * @param vertical
+	 */
 	public void setVertical(BS4DateTimeWidgetPositions vertical)
 	{
 		this.vertical = vertical;
 	}
+
+	/**
+	 * Place the time widget on the x
+	 *
+	 * @return
+	 */
+	public BS4DateTimeWidgetPositions getHorizontal()
+	{
+		return horizontal;
+	}
+
+	/**
+	 * Place the time widget on the x
+	 *
+	 * @param horizontal
+	 */
+	public void setHorizontal(BS4DateTimeWidgetPositions horizontal)
+	{
+		this.horizontal = horizontal;
+	}
+	
+	
 }

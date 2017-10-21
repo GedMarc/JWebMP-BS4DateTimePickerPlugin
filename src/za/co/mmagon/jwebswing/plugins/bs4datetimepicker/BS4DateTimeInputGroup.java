@@ -37,7 +37,7 @@ import za.co.mmagon.jwebswing.plugins.fontawesome.FontAwesomeIcons;
  * @version 1.0
  * @since 17 Jan 2017
  */
-@ComponentInformation(name = "BS 4 Date Time Picker",description = "The Tempus Dominus Bootstrap Date Time Picker",url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
+@ComponentInformation(name = "BS 4 Date Time Picker", description = "The Tempus Dominus Bootstrap Date Time Picker", url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
 public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 		extends BSFormInputGroup<J>
 		implements BSDropDownMenuChildren
@@ -54,7 +54,6 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 	
 	/**
 	 * Constructs a new instance
-	 *
 	 */
 	public BS4DateTimeInputGroup()
 	{
@@ -70,18 +69,29 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 	{
 		super(new BS4DateTimeInput(variableName));
 		getInput().bind(variableName);
-		addAttribute("data-target-input","nearest");
+		addAttribute("data-target-input", "nearest");
 		addClass("date");
 	}
 	
-	
 	/**
-	 * Returns the holder of the icon
+	 * Sets this picker as required
+	 *
+	 * @param required
+	 *
 	 * @return
 	 */
-	public Span getCalendarSelectSpan()
+	public J setRequired(boolean required)
 	{
-		return calendarSelectSpan;
+		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));
+		if (required)
+		{
+			addAttribute("required", "");
+		}
+		else
+		{
+			removeAttribute("required");
+		}
+		return (J) this;
 	}
 	
 	public FontAwesomeIcons getCalendarIcon()
@@ -106,20 +116,20 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 		return this;
 	}
 	
-	/**
-	 * Sets this picker as required
-	 *
-	 * @param required
-	 *
-	 * @return
-	 */
-	public J setRequired(boolean required)
+	@Override
+	public void preConfigure()
 	{
-		addAttribute(AngularAttributes.ngRequired, required + "");
-		addAttribute("required","");
-		return (J) this;
+		if (!isConfigured())
+		{
+			getInput().addAttribute("data-target", calendarSelectSpan.getID(true));
+			getCalendarSelectSpan().addAttribute("data-toggle", getInput().getID());
+
+			getCalendarSelectSpan().add((ComponentHierarchyBase) new FontAwesome(getCalendarIcon()).setTag("span"));
+			getInputGroupAddonsRight().add(getCalendarSelectSpan());
+		}
+		super.preConfigure();
 	}
-	
+
 	/**
 	 * Returns the feature if any is required
 	 *
@@ -133,19 +143,15 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 		}
 		return feature;
 	}
-	
-	@Override
-	public void preConfigure()
+
+	/**
+	 * Returns the holder of the icon
+	 *
+	 * @return
+	 */
+	public Span getCalendarSelectSpan()
 	{
-		if(!isConfigured())
-		{
-			getInput().addAttribute("data-target",calendarSelectSpan.getID(true));
-			getCalendarSelectSpan().addAttribute("data-toggle",getInput().getID());
-			
-			getCalendarSelectSpan().add((ComponentHierarchyBase)new FontAwesome(getCalendarIcon()).setTag("span"));
-			getInputGroupAddonsRight().add(getCalendarSelectSpan());
-		}
-		super.preConfigure();
+		return calendarSelectSpan;
 	}
 	
 	/**
@@ -185,5 +191,5 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 		hash = 79 * hash + (this.getID().hashCode());
 		return hash;
 	}
-
+	
 }
