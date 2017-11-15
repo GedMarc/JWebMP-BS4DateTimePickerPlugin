@@ -256,6 +256,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setDate(LocalDate date)
 	{
 		this.date = date;
@@ -283,6 +284,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setFormat(String format)
 	{
 		this.format = format;
@@ -310,6 +312,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setDayViewHeaderFormat(String dayViewHeaderFormat)
 	{
 		this.dayViewHeaderFormat = dayViewHeaderFormat;
@@ -337,6 +340,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setAdditionalFormats(List<String> additionalFormats)
 	{
 		this.additionalFormats = additionalFormats;
@@ -360,6 +364,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setStepping(Integer stepping)
 	{
 		this.stepping = stepping;
@@ -383,6 +388,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setMinDate(LocalDate minDate)
 	{
 		this.minDate = minDate;
@@ -406,6 +412,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setMaxDate(LocalDate maxDate)
 	{
 		this.maxDate = maxDate;
@@ -429,6 +436,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setUseCurrent(Boolean useCurrent)
 	{
 		this.useCurrent = useCurrent;
@@ -452,6 +460,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setCollapse(Boolean collapse)
 	{
 		this.collapse = collapse;
@@ -483,6 +492,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setDefaultDate(LocalDate defaultDate)
 	{
 		this.defaultDate = defaultDate;
@@ -598,6 +608,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setIcons(BS4DateTimeInputIcons icons)
 	{
 		this.icons = icons;
@@ -621,6 +632,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setUseStrict(Boolean useStrict)
 	{
 		this.useStrict = useStrict;
@@ -644,6 +656,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setSideBySide(Boolean sideBySide)
 	{
 		this.sideBySide = sideBySide;
@@ -672,6 +685,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setDaysOfWeekDisabled(List<Integer> daysOfWeekDisabled)
 	{
 		this.daysOfWeekDisabled = daysOfWeekDisabled;
@@ -695,6 +709,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setCalendarWeeks(Boolean calendarWeeks)
 	{
 		this.calendarWeeks = calendarWeeks;
@@ -740,6 +755,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setViewMode(BS4DateTimeViewModes viewMode)
 	{
 		this.viewMode = viewMode;
@@ -793,6 +809,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setToolbarPlacement(BS4DateTimeToolbarPlacements toolbarPlacement)
 	{
 		this.toolbarPlacement = toolbarPlacement;
@@ -820,6 +837,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setButtons(BS4DateTimeButtonsOptions buttons)
 	{
 		this.buttons = buttons;
@@ -847,6 +865,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setWidgetPositioning(BS4DateTimeWidgetPositioningOptions widgetPositioning)
 	{
 		this.widgetPositioning = widgetPositioning;
@@ -874,6 +893,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setKeepOpen(Boolean keepOpen)
 	{
 		this.keepOpen = keepOpen;
@@ -897,6 +917,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setInline(Boolean inline)
 	{
 		this.inline = inline;
@@ -924,6 +945,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setKeepInvalid(Boolean keepInvalid)
 	{
 		this.keepInvalid = keepInvalid;
@@ -951,6 +973,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setIgnoreReadonly(Boolean ignoreReadonly)
 	{
 		this.ignoreReadonly = ignoreReadonly;
@@ -992,6 +1015,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setAllowMultidate(Boolean allowMultidate)
 	{
 		this.allowMultidate = allowMultidate;
@@ -1035,6 +1059,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
 	public J setMultidateSeparator(Character multidateSeparator)
 	{
 		this.multidateSeparator = multidateSeparator;
