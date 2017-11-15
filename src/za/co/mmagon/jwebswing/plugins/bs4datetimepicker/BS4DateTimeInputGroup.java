@@ -162,7 +162,7 @@ public class BS4DateTimeInputGroup<J extends BS4DateTimeInputGroup<J>>
 	@Override
 	public BS4DateTimePickerOptions getOptions()
 	{
-		Feature f = (Feature) getInput().getFeatures().get(0);
+		Feature f = (Feature) getInput().getFeatures().stream().findFirst().get();
 		return (BS4DateTimePickerOptions) f.getOptions();
 	}
 	
