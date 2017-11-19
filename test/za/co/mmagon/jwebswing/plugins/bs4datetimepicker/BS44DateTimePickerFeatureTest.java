@@ -3,7 +3,7 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.BaseTestClass;
 
-class BS44DateTimePickerFeatureTest extends BaseTestClass
+public class BS44DateTimePickerFeatureTest extends BaseTestClass
 {
 	@Test
 	void getOptions()

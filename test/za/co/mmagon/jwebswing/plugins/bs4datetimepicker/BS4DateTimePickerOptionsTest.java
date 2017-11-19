@@ -5,7 +5,7 @@ import za.co.mmagon.jwebswing.BaseTestClass;
 
 import java.time.LocalDate;
 
-class BS4DateTimePickerOptionsTest extends BaseTestClass
+public class BS4DateTimePickerOptionsTest extends BaseTestClass
 {
 	@Test
 	void getDate()

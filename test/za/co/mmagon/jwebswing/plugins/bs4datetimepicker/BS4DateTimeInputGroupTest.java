@@ -7,7 +7,7 @@ import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.BS4DateTimeViewM
 
 import java.time.LocalDate;
 
-class BS4DateTimeInputGroupTest extends BaseTestClass
+public class BS4DateTimeInputGroupTest extends BaseTestClass
 {
 	@Test
 	void getCalendarSelectSpan()
