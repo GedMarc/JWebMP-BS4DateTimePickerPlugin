@@ -11,8 +11,7 @@ public class BS44DateTimePickerFeatureTest extends BaseTestClass
 		BS44DateTimePickerFeature f = new BS44DateTimePickerFeature(new BS4DateTimeInput());
 		f.getOptions().setFormat("stuff");
 		System.out.println(f.renderJavascript());
-		
-		
+
 		BS4DateTimeInput input = new BS4DateTimeInput();
 		input.getOptions().setFormat("F");
 		
