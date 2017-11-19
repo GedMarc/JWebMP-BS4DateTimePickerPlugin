@@ -5,10 +5,10 @@ import za.co.mmagon.jwebswing.BaseTestClass;
 
 import java.time.LocalDate;
 
-class BS4DateTimePickerOptionsTest extends BaseTestClass
+public class BS4DateTimePickerOptionsTest extends BaseTestClass
 {
 	@Test
-	void getDate()
+	public void getDate()
 	{
 		BS4DateTimePickerOptions options = new BS4DateTimePickerOptions();
 		options.setDate(LocalDate.now());

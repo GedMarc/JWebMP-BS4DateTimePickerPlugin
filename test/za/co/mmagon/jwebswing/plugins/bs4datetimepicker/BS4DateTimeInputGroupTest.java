@@ -7,15 +7,15 @@ import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.BS4DateTimeViewM
 
 import java.time.LocalDate;
 
-class BS4DateTimeInputGroupTest extends BaseTestClass
+public class BS4DateTimeInputGroupTest extends BaseTestClass
 {
 	@Test
-	void getCalendarSelectSpan()
+	public void getCalendarSelectSpan()
 	{
 	}
 	
 	@Test
-	void bind()
+	public void bind()
 	{
 		BS4DateTimeInputGroup inputGroup = new BS4DateTimeInputGroup("bind.me");
 		BS4DateTimeInput ip = new BS4DateTimeInput();
@@ -27,7 +27,7 @@ class BS4DateTimeInputGroupTest extends BaseTestClass
 	}
 	
 	@Test
-	void testJavascript()
+	public void testJavascript()
 	{
 		BS4DateTimeInputGroup inputGroup = new BS4DateTimeInputGroup("bind.me");
 		inputGroup.getOptions().setFormat("Format");
@@ -36,7 +36,7 @@ class BS4DateTimeInputGroupTest extends BaseTestClass
 	}
 	
 	@Test
-	void testMe()
+	public void testMe()
 	{
 		BS4DateTimeInputGroup birthdaypicker = new BS4DateTimeInputGroup("subscribe.birthDate");
 		birthdaypicker.getOptions().setFormat("YYYY-MM-dd");
