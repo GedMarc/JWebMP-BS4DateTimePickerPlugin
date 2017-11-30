@@ -17,8 +17,6 @@
     "tests"
   ],
   "dependencies": {
-    "angular-bootstrap-datetimepicker": "https://github.com/dalelotts/angular-bootstrap-datetimepicker.git#*",
-    "angular-date-time-input": "https://github.com/dalelotts/angular-date-time-input.git#*",
     "tempusdominus-core":"*"
   }
 }

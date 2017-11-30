@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -28,7 +28,7 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum BS4DateTimePickerReferencePool implements ReferencePool
 {
-	TempusDominusReference(new JavascriptReference("tempusdominusreference", 1.0, "bower_components/tempusdominus-core/build/js/core.min.js"),null);
+	TempusDominusReference(new JavascriptReference("tempusdominusreference", 1.0, "bower_components/tempusdominus-core/build/js/tempusdominus-core.js"), null);
 	/**
 	 * The actual javascript
 	 */
@@ -37,14 +37,14 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	 * The actual css reference
 	 */
 	private CSSReference cssReference;
-	
+
 	/**
 	 * Constructs a reference pool
 	 */
 	BS4DateTimePickerReferencePool()
 	{
 	}
-	
+
 	/**
 	 * Constructs a new reference pool
 	 *
@@ -56,7 +56,7 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 		this.javaScriptReference = javaScriptReference;
 		this.cssReference = cssReference;
 	}
-	
+
 	/**
 	 * Returns the javascript reference
 	 *
@@ -67,7 +67,7 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	{
 		return javaScriptReference;
 	}
-	
+
 	/**
 	 * Sets the javascript reference
 	 *
@@ -78,7 +78,7 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	{
 		this.javaScriptReference = javaScriptReference;
 	}
-	
+
 	/**
 	 * Gets the cSS reference
 	 *
@@ -89,7 +89,7 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	{
 		return cssReference;
 	}
-	
+
 	/**
 	 * Sets the CSS Reference
 	 *
