@@ -154,7 +154,7 @@
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
-            <artifactId>jwebswing-bootstrap</artifactId>
+            <artifactId>jwebswing-bootstrap4</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
