@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -21,6 +21,8 @@ import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.bootstrap.dropdown.menu.BSDropDownMenuChildren;
 import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSFormTextInput;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * An implementation of
  * <p>
@@ -32,35 +34,34 @@ import za.co.mmagon.jwebswing.plugins.bootstrap.forms.controls.BSFormTextInput;
  * @since 17 Jan 2017
  */
 @ComponentInformation(name = "BS 4 Date Time Picker",description = "The Tempus Dominus Bootstrap Date Time Picker",url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
-public class BS4DateTimeInput<J extends BS4DateTimeInput<J>>
+public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		extends BSFormTextInput<J>
 		implements BSDropDownMenuChildren
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The associated feature
 	 */
 	private BS44DateTimePickerFeature feature;
-	
-	
-	public BS4DateTimeInput()
+
+	public BS4DateTimePicker()
 	{
-		this("variable.name");
+		this("no.variable");
 	}
-	
+
 	/**
 	 * Constructs a new instance
 	 *
 	 * @param variableName
 	 */
-	public BS4DateTimeInput(String variableName)
+	public BS4DateTimePicker(String variableName)
 	{
 		bind(variableName);
 		addClass("datetimepicker-input");
 		addFeature(getFeature());
 	}
-	
+
 	/**
 	 * Sets this picker as required
 	 *
@@ -68,12 +69,14 @@ public class BS4DateTimeInput<J extends BS4DateTimeInput<J>>
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setRequired(boolean required)
 	{
 		addAttribute(AngularAttributes.ngRequired, Boolean.toString(required));
 		return (J) this;
 	}
-	
+
 	/**
 	 * Returns the feature if any is required
 	 *
@@ -92,31 +95,17 @@ public class BS4DateTimeInput<J extends BS4DateTimeInput<J>>
 	{
 		return getFeature().getOptions();
 	}
-	
+
 	@Override
 	public boolean equals(Object obj)
 	{
-		if (this == obj)
-		{
-			return true;
-		}
-		if (obj == null)
-		{
-			return false;
-		}
-		if (getClass() != obj.getClass())
-		{
-			return false;
-		}
 		return super.equals(obj);
 	}
-	
+
 	@Override
 	public int hashCode()
 	{
-		int hash = 7;
-		hash = 79 * hash + (this.getID().hashCode());
-		return hash;
+		return super.hashCode();
 	}
 
 }

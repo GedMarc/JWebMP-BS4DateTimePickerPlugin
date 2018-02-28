@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -22,8 +22,8 @@ import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.*;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.LinkedHashSet;
+import java.util.Set;
 
 /**
  * All the options
@@ -31,24 +31,30 @@ import java.util.List;
  *
  * @author GedMarc
  * @version 1.0
- * <p>
- * <p>
+ * 		<p>
+ * 		<p>
  * @since Mar 4, 2015
  */
 public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> extends JavaScriptPart<J>
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	/**
-	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
+	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the
+	 * components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options
+	 * .useStrict components configuration.
 	 */
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
+	@JsonFormat(shape = JsonFormat.Shape.STRING,
+			pattern = "yyyy/MM/dd")
 	private LocalDate date;
 	/**
-	 * akes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input strings either from the input element the component is attached to or the date() function. The parameter can also be a boolean:false in which case the format is set to the locale's L LT.
+	 * akes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input
+	 * strings either from the input element the component is attached to or the date() function. The parameter can also be a
+	 * boolean:false in which case the format is set to the locale's L LT.
 	 * <p>
-	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists in the passed string then a 12 hour mode is set)
+	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists
+	 * in the passed string then a 12 hour mode is set)
 	 */
 	private String format;
 	/**
@@ -60,23 +66,33 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	/**
 	 * Takes an array of valid input moment format options.
 	 */
-	private List<String> additionalFormats;
+	private Set<String> additionalFormats;
 	/**
 	 * Takes a number. This be the amount the up/down arrows move the minute value with a time picker.
 	 */
 	private Integer stepping;
 	/**
-	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment. If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the user can select.
+	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment.
+	 * If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the
+	 * user can select.
 	 */
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
+	@JsonFormat(shape = JsonFormat.Shape.STRING,
+			pattern = "yyyy/MM/dd")
 	private LocalDate minDate;
 	/**
-	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment. If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can select.
+	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment
+	 * . If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can
+	 * select.
 	 */
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy/MM/dd")
+	@JsonFormat(shape = JsonFormat.Shape.STRING,
+			pattern = "yyyy/MM/dd")
 	private LocalDate maxDate;
 	/**
-	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year', 'month', 'day', 'hour', 'minute') in the variable.
+	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or
+	 * through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker
+	 * widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on
+	 * the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year',
+	 * 'month', 'day', 'hour', 'minute') in the variable.
 	 */
 	private Boolean useCurrent;
 	/**
@@ -92,13 +108,17 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 */
 	private LocalDate defaultDate;
 	/**
-	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if such exist.
+	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over
+	 * options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if
+	 * such exist.
 	 */
-	private List<LocalDate> disabledDates;
+	private Set<LocalDate> disabledDates;
 	/**
-	 * Takes an [ string or Date or moment ] of values and allows the user to select only from those days. Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.disabledDates if such exist.
+	 * Takes an [ string or Date or moment ] of values and allows the user to select only from those days. Setting this takes precedence
+	 * over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.disabledDates
+	 * if such exist.
 	 */
-	private List<LocalDate> enabledDates;
+	private Set<LocalDate> enabledDates;
 	/**
 	 * Default: {
 	 * time: 'glyphicon glyphicon-time',
@@ -126,7 +146,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * Shows the week of the year to the left of first day of the week
 	 */
 	private Boolean calendarWeeks;
-	
+
 	/**
 	 * Defines if moment should use strict date parsing when considering a date to be valid.
 	 */
@@ -136,9 +156,10 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 */
 	private Boolean sideBySide;
 	/**
-	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
+	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the
+	 * options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
 	 */
-	private List<Integer> daysOfWeekDisabled;
+	private Set<Integer> daysOfWeekDisabled;
 	/**
 	 * Default: 'days'
 	 * Accepts: 'decades','years','months','days'
@@ -174,12 +195,15 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 */
 	private BS4DateTimeToolbarPlacements toolbarPlacement;
 	/**
-	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the input element the component is attached to.
+	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for
+	 * vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the
+	 * input element the component is attached to.
 	 * <p>
-	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
+	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position
+	 * that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
 	 */
 	private BS4DateTimeWidgetPositioningOptions widgetPositioning;
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -229,8 +253,8 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * Takes an string of a valid timezone.
 	 */
 	private Character multidateSeparator;
-	
-	
+
+
 	/**
 	 * The options for the component
 	 */
@@ -238,9 +262,11 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		//Nothing Needed
 	}
-	
+
 	/**
-	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
+	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the
+	 * components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options
+	 * .useStrict components configuration.
 	 *
 	 * @return
 	 */
@@ -248,25 +274,31 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return date;
 	}
-	
+
 	/**
-	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options.useStrict components configuration.
+	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the
+	 * components model current moment. Parsing of the newDate parameter is made using moment library with the options.format and options
+	 * .useStrict components configuration.
 	 *
 	 * @param date
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setDate(LocalDate date)
 	{
 		this.date = date;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input strings either from the input element the component is attached to or the date() function. The parameter can also be a boolean:false in which case the format is set to the locale's L LT.
+	 * Takes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input
+	 * strings either from the input element the component is attached to or the date() function. The parameter can also be a
+	 * boolean:false in which case the format is set to the locale's L LT.
 	 * <p>
-	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists in the passed string then a 12 hour mode is set)
+	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists
+	 * in the passed string then a 12 hour mode is set)
 	 *
 	 * @return
 	 */
@@ -274,23 +306,27 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return format;
 	}
-	
+
 	/**
-	 * Takes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input strings either from the input element the component is attached to or the date() function. The parameter can also be a boolean:false in which case the format is set to the locale's L LT.
+	 * Takes a moment.js format string and sets the components options.format. This is used for displaying and also for parsing input
+	 * strings either from the input element the component is attached to or the date() function. The parameter can also be a
+	 * boolean:false in which case the format is set to the locale's L LT.
 	 * <p>
-	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists in the passed string then a 12 hour mode is set)
+	 * Note: this is also used to determine if the time picker sub component will display the hours in 12 or 24 format. (if a or h exists
+	 * in the passed string then a 12 hour mode is set)
 	 *
 	 * @param format
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setFormat(String format)
 	{
 		this.format = format;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: 'MMMM YYYY'
 	 * <p>
@@ -302,7 +338,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return dayViewHeaderFormat;
 	}
-	
+
 	/**
 	 * Default: 'MMMM YYYY'
 	 * <p>
@@ -313,26 +349,27 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setDayViewHeaderFormat(String dayViewHeaderFormat)
 	{
 		this.dayViewHeaderFormat = dayViewHeaderFormat;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Takes an array of valid input moment format options.
 	 *
 	 * @return
 	 */
-	public List<String> getAdditionalFormats()
+	public Set<String> getAdditionalFormats()
 	{
 		if (additionalFormats == null)
 		{
-			additionalFormats = new ArrayList<>();
+			additionalFormats = new LinkedHashSet<>();
 		}
 		return additionalFormats;
 	}
-	
+
 	/**
 	 * Takes an array of valid input moment format options.
 	 *
@@ -341,12 +378,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public J setAdditionalFormats(List<String> additionalFormats)
+	@NotNull
+	public J setAdditionalFormats(Set<String> additionalFormats)
 	{
 		this.additionalFormats = additionalFormats;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Takes a number. This be the amount the up/down arrows move the minute value with a time picker.
 	 *
@@ -356,7 +394,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return stepping;
 	}
-	
+
 	/**
 	 * Takes a number. This be the amount the up/down arrows move the minute value with a time picker.
 	 *
@@ -365,14 +403,17 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setStepping(Integer stepping)
 	{
 		this.stepping = stepping;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment. If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the user can select.
+	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment.
+	 * If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the
+	 * user can select.
 	 *
 	 * @return
 	 */
@@ -380,23 +421,28 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return minDate;
 	}
-	
+
 	/**
-	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment. If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the user can select.
+	 * Takes a minDate string, Date, moment, boolean:false parameter and disallows the user to select a moment that is before that moment.
+	 * If a boolean:false value is passed the options.minDate parameter is cleared and there is no restriction to the minimum moment the
+	 * user can select.
 	 *
 	 * @param minDate
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setMinDate(LocalDate minDate)
 	{
 		this.minDate = minDate;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment. If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can select.
+	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment
+	 * . If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can
+	 * select.
 	 *
 	 * @return
 	 */
@@ -404,23 +450,30 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return maxDate;
 	}
-	
+
 	/**
-	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment. If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can select.
+	 * Takes a [maxDate] string, Date, moment, boolean:false parameter and disallows the user to select a moment that is after that moment
+	 * . If a boolean:false value is passed options.maxDate is cleared and there is no restriction to the maximum moment the user can
+	 * select.
 	 *
 	 * @param maxDate
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setMaxDate(LocalDate maxDate)
 	{
 		this.maxDate = maxDate;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year', 'month', 'day', 'hour', 'minute') in the variable.
+	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or
+	 * through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker
+	 * widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on
+	 * the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year',
+	 * 'month', 'day', 'hour', 'minute') in the variable.
 	 *
 	 * @return
 	 */
@@ -428,21 +481,26 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return useCurrent;
 	}
-	
+
 	/**
-	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year', 'month', 'day', 'hour', 'minute') in the variable.
+	 * Takes a boolean or string. If a boolean true is passed and the components model moment is not set (either through setDate or
+	 * through a valid value on the input element the component is attached to) then the first time the user opens the datetimepicker
+	 * widget the value is initialized to the current moment of the action. If a false boolean is passed then no initialization happens on
+	 * the input element. You can select the granularity on the initialized moment by passing one of the following strings ('year',
+	 * 'month', 'day', 'hour', 'minute') in the variable.
 	 *
 	 * @param useCurrent
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setUseCurrent(Boolean useCurrent)
 	{
 		this.useCurrent = useCurrent;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Takes a boolean. If set to false the picker will display similar to sideBySide except vertical.
 	 *
@@ -452,7 +510,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return collapse;
 	}
-	
+
 	/**
 	 * Takes a boolean. If set to false the picker will display similar to sideBySide except vertical.
 	 *
@@ -461,12 +519,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setCollapse(Boolean collapse)
 	{
 		this.collapse = collapse;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: false
 	 * Sets the picker default date/time. Overrides useCurrent
@@ -480,7 +539,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return defaultDate;
 	}
-	
+
 	/**
 	 * Default: false
 	 * Sets the picker default date/time. Overrides useCurrent
@@ -493,51 +552,61 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setDefaultDate(LocalDate defaultDate)
 	{
 		this.defaultDate = defaultDate;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if such exist.
+	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over
+	 * options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if
+	 * such exist.
 	 *
 	 * @return
 	 */
 	@NotNull
-	public List<LocalDate> getDisabledDates()
+	public Set<LocalDate> getDisabledDates()
 	{
 		if (disabledDates == null)
 		{
-			disabledDates = new ArrayList<>();
+			disabledDates = new LinkedHashSet<>();
 		}
 		return disabledDates;
 	}
-	
+
 	/**
-	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if such exist.
+	 * Takes an [ string or Date or moment ] of values and disallows the user to select those days. Setting this takes precedence over
+	 * options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.enabledDates if
+	 * such exist.
 	 *
 	 * @param disabledDates
 	 */
-	public void setDisabledDates(List<LocalDate> disabledDates)
+	@NotNull
+	@SuppressWarnings("unchecked")
+	public J setDisabledDates(Set<LocalDate> disabledDates)
 	{
 		this.disabledDates = disabledDates;
+		return (J) this;
 	}
-	
+
 	/**
-	 * Takes an [ string or Date or moment ] of values and allows the user to select only from those days. Setting this takes precedence over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.disabledDates if such exist.
+	 * Takes an [ string or Date or moment ] of values and allows the user to select only from those days. Setting this takes precedence
+	 * over options.minDate, options.maxDate configuration. Also calling this function removes the configuration of options.disabledDates
+	 * if such exist.
 	 *
 	 * @return
 	 */
-	public List<LocalDate> getEnabledDates()
+	public Set<LocalDate> getEnabledDates()
 	{
 		if (enabledDates == null)
 		{
-			enabledDates = new ArrayList<>();
+			enabledDates = new LinkedHashSet<>();
 		}
 		return enabledDates;
 	}
-	
+
 	/**
 	 * Default: {
 	 * time: 'glyphicon glyphicon-time',
@@ -556,11 +625,14 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 *
 	 * @param enabledDates
 	 */
-	public void setEnabledDates(List<LocalDate> enabledDates)
+	@NotNull
+	@SuppressWarnings("unchecked")
+	public J setEnabledDates(Set<LocalDate> enabledDates)
 	{
 		this.enabledDates = enabledDates;
+		return (J) this;
 	}
-	
+
 	/**
 	 * Default: {
 	 * time: 'glyphicon glyphicon-time',
@@ -587,7 +659,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 		}
 		return icons;
 	}
-	
+
 	/**
 	 * Default: {
 	 * time: 'glyphicon glyphicon-time',
@@ -609,12 +681,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setIcons(BS4DateTimeInputIcons icons)
 	{
 		this.icons = icons;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Defines if moment should use strict date parsing when considering a date to be valid.
 	 *
@@ -624,7 +697,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return useStrict;
 	}
-	
+
 	/**
 	 * Defines if moment should use strict date parsing when considering a date to be valid.
 	 *
@@ -633,12 +706,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setUseStrict(Boolean useStrict)
 	{
 		this.useStrict = useStrict;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Takes a boolean. If sideBySide is true and the time picker is used, both components will display side by side instead of collapsing.
 	 *
@@ -648,7 +722,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return sideBySide;
 	}
-	
+
 	/**
 	 * Takes a boolean. If sideBySide is true and the time picker is used, both components will display side by side instead of collapsing.
 	 *
@@ -657,41 +731,45 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setSideBySide(Boolean sideBySide)
 	{
 		this.sideBySide = sideBySide;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
+	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the
+	 * options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
 	 *
 	 * @return
 	 */
 	@NotNull
-	public List<Integer> getDaysOfWeekDisabled()
+	public Set<Integer> getDaysOfWeekDisabled()
 	{
 		if (daysOfWeekDisabled == null)
 		{
-			daysOfWeekDisabled = new ArrayList<>();
+			daysOfWeekDisabled = new LinkedHashSet<>();
 		}
 		return daysOfWeekDisabled;
 	}
-	
+
 	/**
-	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
+	 * Takes an [ Number:0 to 6 ] and disallow the user to select weekdays that exist in this array. This has lower priority over the
+	 * options.minDate, options.maxDate, options.disabledDates and options.enabledDates configuration settings.
 	 *
 	 * @param daysOfWeekDisabled
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
-	public J setDaysOfWeekDisabled(List<Integer> daysOfWeekDisabled)
+	@NotNull
+	public J setDaysOfWeekDisabled(Set<Integer> daysOfWeekDisabled)
 	{
 		this.daysOfWeekDisabled = daysOfWeekDisabled;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Shows the week of the year to the left of first day of the week
 	 *
@@ -701,7 +779,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return calendarWeeks;
 	}
-	
+
 	/**
 	 * Shows the week of the year to the left of first day of the week
 	 *
@@ -710,12 +788,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setCalendarWeeks(Boolean calendarWeeks)
 	{
 		this.calendarWeeks = calendarWeeks;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: 'days'
 	 * Accepts: 'decades','years','months','days'
@@ -736,7 +815,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return viewMode;
 	}
-	
+
 	/**
 	 * Default: 'days'
 	 * Accepts: 'decades','years','months','days'
@@ -756,12 +835,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setViewMode(BS4DateTimeViewModes viewMode)
 	{
 		this.viewMode = viewMode;
 		return (J) this;
 	}
-	
+
 	/**
 	 * toolbarPlacement
 	 * <p>
@@ -786,7 +866,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return toolbarPlacement;
 	}
-	
+
 	/**
 	 * toolbarPlacement
 	 * <p>
@@ -810,12 +890,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setToolbarPlacement(BS4DateTimeToolbarPlacements toolbarPlacement)
 	{
 		this.toolbarPlacement = toolbarPlacement;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Accepts: object with all or some of the parameters above
 	 * <p>
@@ -827,7 +908,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return buttons;
 	}
-	
+
 	/**
 	 * Accepts: object with all or some of the parameters above
 	 * <p>
@@ -838,40 +919,52 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setButtons(BS4DateTimeButtonsOptions buttons)
 	{
 		this.buttons = buttons;
 		return (J) this;
 	}
-	
+
 	/**
-	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the input element the component is attached to.
+	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for
+	 * vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the
+	 * input element the component is attached to.
 	 * <p>
-	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
+	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position
+	 * that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
 	 *
 	 * @return
 	 */
 	public BS4DateTimeWidgetPositioningOptions getWidgetPositioning()
 	{
+		if (widgetPositioning == null)
+		{
+			widgetPositioning = new BS4DateTimeWidgetPositioningOptions();
+		}
 		return widgetPositioning;
 	}
-	
+
 	/**
-	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the input element the component is attached to.
+	 * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for
+	 * vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the
+	 * input element the component is attached to.
 	 * <p>
-	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
+	 * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position
+	 * that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
 	 *
 	 * @param widgetPositioning
 	 *
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setWidgetPositioning(BS4DateTimeWidgetPositioningOptions widgetPositioning)
 	{
 		this.widgetPositioning = widgetPositioning;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -883,7 +976,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return keepOpen;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -894,12 +987,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setKeepOpen(Boolean keepOpen)
 	{
 		this.keepOpen = keepOpen;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Will display the picker inline without the need of a input field. This will also hide borders and shadows.
 	 *
@@ -909,7 +1003,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return inline;
 	}
-	
+
 	/**
 	 * Will display the picker inline without the need of a input field. This will also hide borders and shadows.
 	 *
@@ -918,12 +1012,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setInline(Boolean inline)
 	{
 		this.inline = inline;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -935,7 +1030,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return keepInvalid;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -946,12 +1041,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setKeepInvalid(Boolean keepInvalid)
 	{
 		this.keepInvalid = keepInvalid;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -963,7 +1059,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return ignoreReadonly;
 	}
-	
+
 	/**
 	 * Default: false
 	 * <p>
@@ -974,12 +1070,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setIgnoreReadonly(Boolean ignoreReadonly)
 	{
 		this.ignoreReadonly = ignoreReadonly;
 		return (J) this;
 	}
-	
+
 	/**
 	 * Allows the setting of multiple dates.
 	 * allowMultidate
@@ -998,7 +1095,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return allowMultidate;
 	}
-	
+
 	/**
 	 * Allows the setting of multiple dates.
 	 * allowMultidate
@@ -1016,12 +1113,13 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setAllowMultidate(Boolean allowMultidate)
 	{
 		this.allowMultidate = allowMultidate;
 		return (J) this;
 	}
-	
+
 	/**
 	 * multidateSeparator
 	 * <p>
@@ -1041,7 +1139,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	{
 		return multidateSeparator;
 	}
-	
+
 	/**
 	 * multidateSeparator
 	 * <p>
@@ -1060,6 +1158,7 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> ext
 	 * @return
 	 */
 	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setMultidateSeparator(Character multidateSeparator)
 	{
 		this.multidateSeparator = multidateSeparator;

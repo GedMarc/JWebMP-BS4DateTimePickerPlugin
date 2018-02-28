@@ -28,7 +28,9 @@ import za.co.mmagon.jwebswing.base.servlets.interfaces.ReferencePool;
  */
 public enum BS4DateTimePickerReferencePool implements ReferencePool
 {
-	TempusDominusReference(new JavascriptReference("tempusdominusreference", 1.0, "bower_components/tempusdominus-core/build/js/tempusdominus-core.js"), null);
+	TempusDominusReference(
+			new JavascriptReference("tempusdominusreference", 1.0, "tempus-dominus-bs4/build/js/tempusdominus-bootstrap-4.js"),
+			new CSSReference("tempusdominusreferencecss", 5.0, "tempus-dominus-bs4/build/css/tempusdominus-bootstrap-4.css"));
 	/**
 	 * The actual javascript
 	 */
