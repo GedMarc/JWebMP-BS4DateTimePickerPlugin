@@ -22,7 +22,6 @@ public class BS4DateTimePickerTest
 		BS4DateTimePickerInput ip = new BS4DateTimePickerInput();
 		ip.getOptions()
 		  .setFormat("asdf");
-		inputGroup.setInput(ip);
 		inputGroup.getOptions()
 		          .setFormat("Format");
 		System.out.println(inputGroup.toString(0));

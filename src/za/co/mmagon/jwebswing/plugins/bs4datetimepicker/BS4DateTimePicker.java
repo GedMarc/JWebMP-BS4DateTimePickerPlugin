@@ -19,7 +19,6 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 import com.google.common.base.Strings;
 import za.co.mmagon.jwebswing.base.ComponentHierarchyBase;
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
-import za.co.mmagon.jwebswing.base.html.DivSimple;
 import za.co.mmagon.jwebswing.base.html.Span;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
 import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.groups.sets.BSFormInputGroup;
@@ -43,7 +42,7 @@ import javax.validation.constraints.NotNull;
 		description = "The Tempus Dominus Bootstrap Date Time Picker",
 		url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
 public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
-		extends BSFormInputGroup<J>
+		extends BSFormInputGroup
 {
 
 	private static final long serialVersionUID = 1L;
@@ -72,7 +71,10 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	 */
 	public BS4DateTimePicker(String variableName)
 	{
-		super(new BS4DateTimePickerInput(variableName));
+		super(null);
+		input = new BS4DateTimePickerInput();
+		setComponent(input);
+		bind(variableName);
 
 		input = getInput();
 		feature = new BS44DateTimePickerFeature(this);
@@ -85,35 +87,23 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		addClass("date");
 	}
 
-	@NotNull
-	@Override
-	public BS4DateTimePickerInput<?> getInput()
-	{
-		return (BS4DateTimePickerInput) super.getInput();
-	}
-
-	@Override
-	public boolean equals(Object obj)
-	{
-		return super.equals(obj);
-	}
-
-	@Override
-	public int hashCode()
-	{
-		return super.hashCode();
-	}
-
 	/**
 	 * Returns the options if any is required
 	 *
 	 * @return
 	 */
 	@Override
-	public DivSimple<J> bind(String variableName)
+	public J bind(String variableName)
 	{
 		addAttribute(AngularAttributes.ngModel, variableName);
-		return this;
+		return (J) this;
+	}
+
+	@NotNull
+	@Override
+	public BS4DateTimePickerInput<?> getInput()
+	{
+		return (BS4DateTimePickerInput) super.getInput();
 	}
 
 	@Override
@@ -130,9 +120,21 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 			getCalendarSelectSpan().add((ComponentHierarchyBase) new FontAwesome(getCalendarIcon()).setTag("span"));
 
-			getInputGroupAddonsRight().add(getCalendarSelectSpan());
+			//getInputGroupAddonsAppends().add(getCalendarSelectSpan());
 		}
 		super.preConfigure();
+	}
+
+	@Override
+	public boolean equals(Object obj)
+	{
+		return super.equals(obj);
+	}
+
+	@Override
+	public int hashCode()
+	{
+		return super.hashCode();
 	}
 
 	/**

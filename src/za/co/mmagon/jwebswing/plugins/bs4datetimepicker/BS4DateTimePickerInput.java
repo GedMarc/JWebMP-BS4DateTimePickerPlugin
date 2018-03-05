@@ -17,8 +17,8 @@
 package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
 import za.co.mmagon.jwebswing.base.angular.AngularAttributes;
+import za.co.mmagon.jwebswing.base.html.inputs.InputTextType;
 import za.co.mmagon.jwebswing.plugins.ComponentInformation;
-import za.co.mmagon.jwebswing.plugins.bootstrap4.forms.controls.BSFormTextInput;
 
 import javax.validation.constraints.NotNull;
 
@@ -36,7 +36,7 @@ import javax.validation.constraints.NotNull;
 		description = "The Tempus Dominus Bootstrap Date Time Picker",
 		url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
 public class BS4DateTimePickerInput<J extends BS4DateTimePickerInput<J>>
-		extends BSFormTextInput<J>
+		extends InputTextType<J>
 {
 
 	private static final long serialVersionUID = 1L;
