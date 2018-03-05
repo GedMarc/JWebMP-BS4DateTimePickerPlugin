@@ -1,0 +1,26 @@
+{
+  "name": "bs4datetimepickerpluginjwebswing",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000T\u0000h\u0000e\u0000 \u0000J\u0000W\u0000e\u0000b\u0000S\u0000w\u0000i\u0000n\u0000g\u0000 \u0000P\u0000l\u0000u\u0000g\u0000i\u0000n\u0000 \u0000f\u0000o\u0000r\u0000 \u0000t\u0000h\u0000e\u0000 \u0000B\u0000o\u0000o\u0000t\u0000s\u0000t\u0000r\u0000a\u0000p\u0000 \u0000D\u0000a\u0000t\u0000e\u0000 \u0000T\u0000i\u0000m\u0000e\u0000 \u0000P\u0000i\u0000c\u0000k\u0000e\u0000r\u0000 \u00004\u0000 \u0000(\u0000T\u0000e\u0000m\u0000p\u0000u\u0000s\u0000 \u0000D\u0000o\u0000m\u0000i\u0000n\u0000u\u0000s\u0000 \u00004\u0000)\u0000\r\u0000 \u0000\r\u0000 \u0000\r\u0000 \u0000h\u0000t\u0000t\u0000p\u0000s\u0000:\u0000/\u0000/\u0000g\u0000i\u0000t\u0000h\u0000u\u0000b\u0000.\u0000c\u0000o\u0000m\u0000/\u0000t\u0000e\u0000m\u0000p\u0000u\u0000s\u0000d\u0000o\u0000m\u0000i\u0000n\u0000u\u0000s\u0000/\u0000b\u0000o\u0000o\u0000t\u0000s\u0000t\u0000r\u0000a\u0000p\u0000-\u00004\u0000",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "tempusdominus-bootstrap-4": "^5.0.0-alpha15"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin/issues"
+  },
+  "homepage": "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin#readme"
+}
