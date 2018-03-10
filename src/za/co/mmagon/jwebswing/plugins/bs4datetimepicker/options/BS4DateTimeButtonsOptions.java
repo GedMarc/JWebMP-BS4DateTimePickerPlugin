@@ -2,10 +2,13 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options;
 
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * The bootstrap 4 options for the date time button
  */
-public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> extends JavaScriptPart<J>
+public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>>
+		extends JavaScriptPart<J>
 {
 	/**
 	 * Should show the today button
@@ -30,6 +33,7 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 
 	/**
 	 * If the show today button is there
+	 *
 	 * @return
 	 */
 	public Boolean getShowToday()
@@ -44,6 +48,8 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setShowToday(Boolean showToday)
 	{
 		this.showToday = showToday;
@@ -52,6 +58,7 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 
 	/**
 	 * If the clear button should be shown
+	 *
 	 * @return
 	 */
 	public Boolean getShowClear()
@@ -66,6 +73,8 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setShowClear(Boolean showClear)
 	{
 		this.showClear = showClear;
@@ -74,6 +83,7 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 
 	/**
 	 * If the close button should be shown
+	 *
 	 * @return
 	 */
 	public Boolean getShowClose()
@@ -83,12 +93,16 @@ public class BS4DateTimeButtonsOptions<J extends BS4DateTimeButtonsOptions<J>> e
 
 	/**
 	 * If the close button should be shown
+	 *
 	 * @param showClose
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setShowClose(Boolean showClose)
 	{
 		this.showClose = showClose;
-		return (J)this;
+		return (J) this;
 	}
 }

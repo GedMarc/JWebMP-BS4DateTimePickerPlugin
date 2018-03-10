@@ -19,6 +19,7 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 import za.co.mmagon.jwebswing.Page;
 import za.co.mmagon.jwebswing.PageConfigurator;
 import za.co.mmagon.jwebswing.plugins.PluginInformation;
+import za.co.mmagon.jwebswing.plugins.jquery.JQueryPageConfigurator;
 
 /**
  * @author GedMarc
@@ -37,11 +38,11 @@ import za.co.mmagon.jwebswing.plugins.PluginInformation;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BS4DateTimePickerPlugin.jar/download",
 		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
-		pluginLastUpdatedDate = "2017/10/01"
-)
-public class BS4DateTimePageConfigurator extends PageConfigurator
+		pluginLastUpdatedDate = "2017/10/01")
+public class BS4DateTimePageConfigurator
+		extends PageConfigurator
 {
-	
+
 	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
 	private static final long serialVersionUID = 1L;
 
@@ -52,14 +53,17 @@ public class BS4DateTimePageConfigurator extends PageConfigurator
 	{
 		//Nothing Needed
 	}
-	
+
 	@Override
 	public Page configure(Page page)
 	{
 		if (!page.isConfigured())
 		{
-			page.getBody().addJavaScriptReference(BS4DateTimePickerReferencePool.TempusDominusReference.getJavaScriptReference());
-			page.getBody().addCssReference(BS4DateTimePickerReferencePool.TempusDominusReference.getCssReference());
+			JQueryPageConfigurator.setRequired(true);
+			page.getBody()
+			    .addJavaScriptReference(BS4DateTimePickerReferencePool.TempusDominusReference.getJavaScriptReference());
+			page.getBody()
+			    .addCssReference(BS4DateTimePickerReferencePool.TempusDominusReference.getCssReference());
 		}
 		return page;
 	}

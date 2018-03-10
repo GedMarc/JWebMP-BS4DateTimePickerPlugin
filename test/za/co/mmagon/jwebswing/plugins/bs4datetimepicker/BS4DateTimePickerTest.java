@@ -18,10 +18,9 @@ public class BS4DateTimePickerTest
 	@Test
 	public void bind()
 	{
-		BS4DateTimePicker inputGroup = new BS4DateTimePicker("bind.me");
-		BS4DateTimePickerInput ip = new BS4DateTimePickerInput();
-		ip.getOptions()
-		  .setFormat("asdf");
+		BS4DateTimePicker inputGroup = new BS4DateTimePicker();
+		inputGroup.getOptions()
+		          .setFormat("asdf");
 		inputGroup.getOptions()
 		          .setFormat("Format");
 		System.out.println(inputGroup.toString(0));
@@ -31,17 +30,17 @@ public class BS4DateTimePickerTest
 	@Test
 	public void testJavascript()
 	{
-		BS4DateTimePicker inputGroup = new BS4DateTimePicker("bind.me");
+		BS4DateTimePicker inputGroup = new BS4DateTimePicker();
 		inputGroup.getOptions()
 		          .setFormat("Format");
 		System.out.println(inputGroup.renderJavascript());
-
 	}
 
 	@Test
 	public void testMe()
 	{
-		BS4DateTimePicker birthdaypicker = new BS4DateTimePicker("subscribe.birthDate");
+		BS4DateTimePicker birthdaypicker = new BS4DateTimePicker();
+		birthdaypicker.setID("test");
 		birthdaypicker.getOptions()
 		              .setFormat("YYYY-MM-dd");
 		birthdaypicker.getOptions()
@@ -49,9 +48,10 @@ public class BS4DateTimePickerTest
 		                                   .minusYears(18l));
 		birthdaypicker.getOptions()
 		              .setViewMode(BS4DateTimeViewModes.Years);
-		birthdaypicker.setRequired(true);
+
 		birthdaypicker.getInput()
 		              .setPlaceholder("Birth Date");
+
 		birthdaypicker.bind("subscribe.birthDate");
 
 		System.out.println(birthdaypicker.toString(0));
@@ -62,4 +62,22 @@ public class BS4DateTimePickerTest
 		System.out.println(birthDayGroup.renderJavascript());
 	}
 
+	@Test
+	public void testNoButton()
+	{
+		BS4DateTimePicker inputGroup = new BS4DateTimePicker();
+		inputGroup.setID("testNoButton");
+		inputGroup.setNoIcon();
+		System.out.println(inputGroup.toString(0));
+	}
+
+	@Test
+	public void testLink()
+	{
+		BS4DateTimePicker inputGroup = new BS4DateTimePicker();
+		BS4DateTimePicker inputGroupMax = new BS4DateTimePicker();
+		BS4DateTimePicker.linkPickers(inputGroup, inputGroupMax);
+		System.out.println(inputGroup.toString(0));
+		System.out.println(inputGroup.renderJavascript());
+	}
 }

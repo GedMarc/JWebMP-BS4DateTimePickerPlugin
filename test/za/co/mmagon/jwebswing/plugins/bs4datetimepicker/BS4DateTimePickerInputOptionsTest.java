@@ -2,6 +2,7 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 
 import org.junit.jupiter.api.Test;
 import za.co.mmagon.jwebswing.BaseTestClass;
+import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 
 import java.time.LocalDate;
 

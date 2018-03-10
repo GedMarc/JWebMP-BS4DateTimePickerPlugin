@@ -1,4 +1,4 @@
-/* 
+/*
  * Copyright (C) 2017 Marc Magon
  *
  * This program is free software: you can redistribute it and/or modify
@@ -19,6 +19,8 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
 import za.co.mmagon.jwebswing.Component;
 import za.co.mmagon.jwebswing.Feature;
 import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
+import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.interfaces.BS4DateTimePickerFeatures;
+import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents
@@ -27,13 +29,15 @@ import za.co.mmagon.jwebswing.base.html.interfaces.GlobalFeatures;
  * @version 1.0
  * @since 2013/01/16
  */
-public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions, BS44DateTimePickerFeature> implements BS4DateTimePickerFeatures, GlobalFeatures
+public class BS44DateTimePickerFeature
+		extends Feature<BS4DateTimePickerOptions, BS44DateTimePickerFeature>
+		implements BS4DateTimePickerFeatures, GlobalFeatures
 {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	private BS4DateTimePickerOptions options;
-	
+
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
 	 * <p>
@@ -45,7 +49,7 @@ public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions,
 		super("BS4DateTimePickerFeature");
 		setComponent(forComponent);
 	}
-	
+
 	/**
 	 * Returns all the tooltip options
 	 * <p>
@@ -61,7 +65,7 @@ public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions,
 		}
 		return options;
 	}
-	
+
 	@Override
 	public void assignFunctionsToComponent()
 	{
@@ -70,30 +74,16 @@ public class BS44DateTimePickerFeature extends Feature<BS4DateTimePickerOptions,
 		requiredString += ");" + getNewLine();
 		addQuery(requiredString);
 	}
-	
+
 	@Override
-	public boolean equals(Object obj)
+	public boolean equals(Object o)
 	{
-		if (this == obj)
-		{
-			return true;
-		}
-		if (obj == null)
-		{
-			return false;
-		}
-		if (getClass() != obj.getClass())
-		{
-			return false;
-		}
-		return super.equals(obj);
+		return super.equals(o);
 	}
-	
+
 	@Override
 	public int hashCode()
 	{
-		int hash = 7;
-		hash = 79 * hash + (this.getID().hashCode());
-		return hash;
+		return super.hashCode();
 	}
 }

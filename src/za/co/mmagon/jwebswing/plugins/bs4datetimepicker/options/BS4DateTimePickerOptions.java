@@ -14,11 +14,10 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package za.co.mmagon.jwebswing.plugins.bs4datetimepicker;
+package za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
-import za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options.*;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
@@ -35,7 +34,8 @@ import java.util.Set;
  * 		<p>
  * @since Mar 4, 2015
  */
-public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>> extends JavaScriptPart<J>
+public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>>
+		extends JavaScriptPart<J>
 {
 
 	private static final long serialVersionUID = 1L;

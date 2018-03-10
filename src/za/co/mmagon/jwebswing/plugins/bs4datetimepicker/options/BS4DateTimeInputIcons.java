@@ -2,13 +2,17 @@ package za.co.mmagon.jwebswing.plugins.bs4datetimepicker.options;
 
 import za.co.mmagon.jwebswing.htmlbuilder.javascript.JavaScriptPart;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * Class names of the given items
+ *
  * @param <J>
  */
-public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends JavaScriptPart<J>
+public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>>
+		extends JavaScriptPart<J>
 {
-	
+
 	private static final long serialVersionUID = 1L;
 	/**
 	 * The time
@@ -57,6 +61,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * The icon class for time
+	 *
 	 * @return
 	 */
 	public String getTime()
@@ -71,6 +76,8 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setTime(String time)
 	{
 		this.time = time;
@@ -79,6 +86,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for date
+	 *
 	 * @return
 	 */
 	public String getDate()
@@ -88,9 +96,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for date
+	 *
 	 * @param date
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setDate(String date)
 	{
 		this.date = date;
@@ -99,6 +111,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for up
+	 *
 	 * @return
 	 */
 	public String getUp()
@@ -108,9 +121,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for up
+	 *
 	 * @param up
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setUp(String up)
 	{
 		this.up = up;
@@ -119,6 +136,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for down
+	 *
 	 * @return
 	 */
 	public String getDown()
@@ -128,9 +146,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for down
+	 *
 	 * @param down
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setDown(String down)
 	{
 		this.down = down;
@@ -139,6 +161,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for previous
+	 *
 	 * @return
 	 */
 	public String getPrevious()
@@ -153,6 +176,8 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setPrevious(String previous)
 	{
 		this.previous = previous;
@@ -161,6 +186,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for next
+	 *
 	 * @return
 	 */
 	public String getNext()
@@ -170,9 +196,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for next
+	 *
 	 * @param next
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setNext(String next)
 	{
 		this.next = next;
@@ -181,6 +211,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for today
+	 *
 	 * @return
 	 */
 	public String getToday()
@@ -190,9 +221,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for today
+	 *
 	 * @param today
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setToday(String today)
 	{
 		this.today = today;
@@ -201,6 +236,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for clear
+	 *
 	 * @return
 	 */
 	public String getClear()
@@ -210,9 +246,13 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for clear
+	 *
 	 * @param clear
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setClear(String clear)
 	{
 		this.clear = clear;
@@ -221,6 +261,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for close
+	 *
 	 * @return
 	 */
 	public String getClose()
@@ -230,12 +271,16 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>> extends J
 
 	/**
 	 * Sets the icon for close
+	 *
 	 * @param close
+	 *
 	 * @return
 	 */
+	@SuppressWarnings("unchecked")
+	@NotNull
 	public J setClose(String close)
 	{
 		this.close = close;
-		return (J)this;
+		return (J) this;
 	}
 }
