@@ -167,11 +167,6 @@
             <artifactId>jwebswing-font-awesome</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>jwebswing-glyphicons</artifactId>
-            <version>${project.version}</version>
-        </dependency>
     </dependencies>
     <distributionManagement>
         <snapshotRepository>
