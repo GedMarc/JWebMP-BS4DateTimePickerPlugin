@@ -1,6 +1,5 @@
 package com.jwebmp.plugins.bs4datetimepicker;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroup;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimeViewModes;
 import org.junit.jupiter.api.Test;
@@ -8,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.time.LocalDate;
 
 public class BS4DateTimePickerTest
-		extends BaseTestClass
+
 {
 	@Test
 	public void getCalendarSelectSpan()

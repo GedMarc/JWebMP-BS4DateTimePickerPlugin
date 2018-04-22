@@ -1,13 +1,12 @@
 package com.jwebmp.plugins.bs4datetimepicker;
 
-import com.jwebmp.BaseTestClass;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
 
 public class BS4DateTimePickerInputOptionsTest
-		extends BaseTestClass
+
 {
 	@Test
 	public void getDate()
