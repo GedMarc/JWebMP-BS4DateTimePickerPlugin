@@ -54,7 +54,6 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 	private FontAwesomeIcons calendarIcon = FontAwesomeIcons.calendar;
 
-
 	/**
 	 * Constructs a new instance
 	 */
