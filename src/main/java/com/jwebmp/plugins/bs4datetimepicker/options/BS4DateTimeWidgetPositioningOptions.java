@@ -3,11 +3,14 @@ package com.jwebmp.plugins.bs4datetimepicker.options;
 import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
 
 /**
- * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for vertical and 'auto', 'left', 'right' for horizontal which defines where the dropdown with the widget will appear relative to the input element the component is attached to.
-
- 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position that is visible to the user. Usually you should not override those options unless you have a special need in your layout.
+ * Takes an object parameter that can contain two keys vertical and horizontal each having a value of 'auto', 'top', 'bottom' for vertical and 'auto', 'left', 'right' for
+ * horizontal which defines where the dropdown with the widget will appear relative to the input element the component is attached to.
+ * <p>
+ * 'auto' is the default value for both horizontal and vertical keys and it tries to automatically place the dropdown in a position that is visible to the user. Usually you should
+ * not override those options unless you have a special need in your layout.
  */
-public class BS4DateTimeWidgetPositioningOptions extends JavaScriptPart<BS4DateTimeWidgetPositioningOptions>
+public class BS4DateTimeWidgetPositioningOptions
+		extends JavaScriptPart<BS4DateTimeWidgetPositioningOptions>
 {
 	/**
 	 * Place the time widget on the x
@@ -28,6 +31,7 @@ public class BS4DateTimeWidgetPositioningOptions extends JavaScriptPart<BS4DateT
 
 	/**
 	 * Place the time widget on the y
+	 *
 	 * @return
 	 */
 	public BS4DateTimeWidgetPositions getVertical()
@@ -37,6 +41,7 @@ public class BS4DateTimeWidgetPositioningOptions extends JavaScriptPart<BS4DateT
 
 	/**
 	 * Place the time widget on the y
+	 *
 	 * @param vertical
 	 */
 	public void setVertical(BS4DateTimeWidgetPositions vertical)
@@ -63,6 +68,5 @@ public class BS4DateTimeWidgetPositioningOptions extends JavaScriptPart<BS4DateT
 	{
 		this.horizontal = horizontal;
 	}
-
 
 }

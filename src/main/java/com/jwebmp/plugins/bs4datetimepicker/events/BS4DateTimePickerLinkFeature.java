@@ -57,8 +57,16 @@ public class BS4DateTimePickerLinkFeature
 	@Override
 	protected void assignFunctionsToComponent()
 	{
-		String minString = dateTimePickerMin.getJQueryID() + "on(\"change.datetimepicker\", function (e) {" + dateTimePickerMax.getJQueryID() + "datetimepicker('minDate', e.date);" + "});";
-		String maxString = dateTimePickerMax.getJQueryID() + "on(\"change.datetimepicker\", function (e) {" + dateTimePickerMin.getJQueryID() + "datetimepicker('maxDate', e.date);" + "});";
+		String minString = dateTimePickerMin.getJQueryID() +
+		                   "on(\"change.datetimepicker\", function (e) {" +
+		                   dateTimePickerMax.getJQueryID() +
+		                   "datetimepicker('minDate', e.date);" +
+		                   "});";
+		String maxString = dateTimePickerMax.getJQueryID() +
+		                   "on(\"change.datetimepicker\", function (e) {" +
+		                   dateTimePickerMin.getJQueryID() +
+		                   "datetimepicker('maxDate', e.date);" +
+		                   "});";
 
 		addQuery(minString);
 		addQuery(maxString);

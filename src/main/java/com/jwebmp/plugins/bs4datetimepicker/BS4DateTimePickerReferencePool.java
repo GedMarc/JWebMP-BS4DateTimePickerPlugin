@@ -26,7 +26,8 @@ import com.jwebmp.base.servlets.interfaces.ReferencePool;
  * @author GedMarc
  * @since 20 Apr 2016
  */
-public enum BS4DateTimePickerReferencePool implements ReferencePool
+public enum BS4DateTimePickerReferencePool
+		implements ReferencePool
 {
 	TempusDominusReference(
 			new JavascriptReference("tempusdominusreference", 1.0, "tempus-dominus-bs4/build/js/tempusdominus-bootstrap-4.js"),
@@ -60,28 +61,6 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	}
 
 	/**
-	 * Returns the javascript reference
-	 *
-	 * @return
-	 */
-	@Override
-	public JavascriptReference getJavaScriptReference()
-	{
-		return javaScriptReference;
-	}
-
-	/**
-	 * Sets the javascript reference
-	 *
-	 * @param javaScriptReference
-	 */
-	@Override
-	public void setJavaScriptReference(JavascriptReference javaScriptReference)
-	{
-		this.javaScriptReference = javaScriptReference;
-	}
-
-	/**
 	 * Gets the cSS reference
 	 *
 	 * @return
@@ -101,5 +80,27 @@ public enum BS4DateTimePickerReferencePool implements ReferencePool
 	public void setCssReference(CSSReference cssReference)
 	{
 		this.cssReference = cssReference;
+	}
+
+	/**
+	 * Returns the javascript reference
+	 *
+	 * @return
+	 */
+	@Override
+	public JavascriptReference getJavaScriptReference()
+	{
+		return javaScriptReference;
+	}
+
+	/**
+	 * Sets the javascript reference
+	 *
+	 * @param javaScriptReference
+	 */
+	@Override
+	public void setJavaScriptReference(JavascriptReference javaScriptReference)
+	{
+		this.javaScriptReference = javaScriptReference;
 	}
 }

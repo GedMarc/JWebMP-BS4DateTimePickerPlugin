@@ -56,7 +56,6 @@ public class BS4DateTimePickerTest
 		System.out.println(birthdaypicker.toString(0));
 		System.out.println(birthdaypicker.renderJavascript());
 
-
 		BSFormGroup birthDayGroup = new BSFormGroup();
 		System.out.println(birthDayGroup.renderJavascript());
 	}

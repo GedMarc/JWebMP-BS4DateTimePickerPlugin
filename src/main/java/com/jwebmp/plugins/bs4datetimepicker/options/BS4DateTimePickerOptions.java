@@ -254,7 +254,6 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>>
 	 */
 	private Character multidateSeparator;
 
-
 	/**
 	 * The options for the component
 	 */

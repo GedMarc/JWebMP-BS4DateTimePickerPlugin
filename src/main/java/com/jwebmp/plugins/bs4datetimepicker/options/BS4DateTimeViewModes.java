@@ -7,8 +7,7 @@ public enum BS4DateTimeViewModes
 	Decades,
 	Years,
 	Months,
-	Days
-	;
+	Days;
 
 	@Override
 	@JsonValue

@@ -8,8 +8,7 @@ public enum BS4DateTimeWidgetPositions
 	left,
 	right,
 	top,
-	bottom
-	;
+	bottom;
 
 	@Override
 	@JsonValue
