@@ -108,6 +108,19 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		return super.hashCode();
 	}
 
+	@Override
+	public @NotNull J setID(String id)
+	{
+		return super.setID(id);
+	}
+
+	@NotNull
+	@Override
+	public InputTextType<?> getInput()
+	{
+		return super.getInput();
+	}
+
 	/**
 	 * Sets to display as Date only (sets format to L)
 	 *
