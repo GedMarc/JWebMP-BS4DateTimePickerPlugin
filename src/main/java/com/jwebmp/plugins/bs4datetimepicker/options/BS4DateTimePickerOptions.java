@@ -17,7 +17,7 @@
 package com.jwebmp.plugins.bs4datetimepicker.options;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.jwebmp.htmlbuilder.javascript.JavaScriptPart;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;

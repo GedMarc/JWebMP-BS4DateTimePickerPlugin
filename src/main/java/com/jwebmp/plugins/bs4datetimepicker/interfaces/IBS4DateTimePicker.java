@@ -17,7 +17,7 @@
 
 package com.jwebmp.plugins.bs4datetimepicker.interfaces;
 
-import com.jwebmp.base.interfaces.ICssStructure;
+import com.jwebmp.core.base.interfaces.ICssStructure;
 import com.jwebmp.plugins.bs4datetimepicker.BS4DateTimePicker;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 

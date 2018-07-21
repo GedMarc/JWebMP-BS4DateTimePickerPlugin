@@ -16,11 +16,11 @@
  */
 package com.jwebmp.plugins.bs4datetimepicker;
 
-import com.jwebmp.base.html.Div;
-import com.jwebmp.base.html.Italic;
-import com.jwebmp.base.html.attributes.ButtonAttributes;
-import com.jwebmp.base.html.inputs.InputTextType;
-import com.jwebmp.plugins.ComponentInformation;
+import com.jwebmp.core.base.html.Div;
+import com.jwebmp.core.base.html.Italic;
+import com.jwebmp.core.base.html.attributes.ButtonAttributes;
+import com.jwebmp.core.base.html.inputs.InputTextType;
+import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.bootstrap4.forms.groups.sets.BSFormInputGroup;
 import com.jwebmp.plugins.bs4datetimepicker.events.BS4DateTimePickerLinkFeature;
 import com.jwebmp.plugins.bs4datetimepicker.interfaces.IBS4DateTimePicker;

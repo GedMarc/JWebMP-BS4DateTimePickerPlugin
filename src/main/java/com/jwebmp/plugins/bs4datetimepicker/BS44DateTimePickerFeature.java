@@ -16,9 +16,9 @@
  */
 package com.jwebmp.plugins.bs4datetimepicker;
 
-import com.jwebmp.Component;
-import com.jwebmp.Feature;
-import com.jwebmp.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.core.Component;
+import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
 import com.jwebmp.plugins.bs4datetimepicker.interfaces.BS4DateTimePickerFeatures;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 
