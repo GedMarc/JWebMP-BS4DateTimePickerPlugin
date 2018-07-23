@@ -17,9 +17,9 @@
 package com.jwebmp.plugins.bs4datetimepicker;
 
 import com.jwebmp.core.Page;
-import com.jwebmp.core.PageConfigurator;
 import com.jwebmp.core.plugins.PluginInformation;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
+import com.jwebmp.core.services.IPageConfigurator;
 
 /**
  * @author GedMarc
@@ -40,12 +40,8 @@ import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
 		pluginLastUpdatedDate = "2017/10/01")
 public class BS4DateTimePageConfigurator
-		extends PageConfigurator
+		implements IPageConfigurator
 {
-
-	public static final String BSDateTimeEnabled = "bs-datetime-enabled";
-	private static final long serialVersionUID = 1L;
-
 	/**
 	 * Constructs a new instance of the BS4DateTimePicker
 	 */
