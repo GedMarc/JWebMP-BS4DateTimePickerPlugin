@@ -17,4 +17,8 @@ module com.jwebmp.plugins.bs4datetimepicker {
 
 	provides IPageConfigurator with BS4DateTimePageConfigurator;
 
+	opens com.jwebmp.plugins.bs4datetimepicker to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4datetimepicker.interfaces to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4datetimepicker.events to com.fasterxml.jackson.databind,com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4datetimepicker.options to com.fasterxml.jackson.databind,com.jwebmp.core;
 }
