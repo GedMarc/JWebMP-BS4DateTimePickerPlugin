@@ -13,7 +13,6 @@ module com.jwebmp.plugins.bs4datetimepicker {
 
 	requires java.validation;
 	requires com.jwebmp.plugins.bootstrap4;
-	requires com.jwebmp.plugins.fontawesome;
 
 	provides IPageConfigurator with BS4DateTimePageConfigurator;
 

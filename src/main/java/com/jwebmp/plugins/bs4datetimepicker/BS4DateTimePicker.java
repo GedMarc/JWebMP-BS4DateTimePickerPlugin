@@ -25,7 +25,6 @@ import com.jwebmp.plugins.bootstrap4.forms.groups.sets.BSFormInputGroup;
 import com.jwebmp.plugins.bs4datetimepicker.events.BS4DateTimePickerLinkFeature;
 import com.jwebmp.plugins.bs4datetimepicker.interfaces.IBS4DateTimePicker;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
-import com.jwebmp.plugins.fontawesome.FontAwesomeIcons;
 
 import javax.validation.constraints.NotNull;
 
@@ -52,7 +51,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 	private boolean hideButton;
 
-	private FontAwesomeIcons calendarIcon = FontAwesomeIcons.calendar;
+	private Italic calendarIcon;
 
 	/**
 	 * Constructs a new instance
@@ -82,7 +81,8 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		{
 			Div inputGroupText = new Div();
 			inputGroupText.addClass("input-group-text");
-			inputGroupText.add(new Italic<>().addClass(calendarIcon.toString()));
+			if(calendarIcon != null)
+				inputGroupText.add(calendarIcon.setTiny(true).toString(0));
 
 			getInput().addAttribute(ButtonAttributes.Data_Target.toString(), getID(true));
 			if (!hideButton)
@@ -170,6 +170,28 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		return (J) this;
 	}
 
+	public Italic getCalendarIcon()
+	{
+		return calendarIcon;
+	}
+
+	/**
+	 * Sets the calendar icon or null
+	 * @param calendarIcon The icon - nullbale
+	 * @return The calendar icon
+	 */
+	@NotNull
+	@SuppressWarnings("unchecked")
+	public J setCalendarIcon(Italic calendarIcon)
+	{
+		this.calendarIcon = calendarIcon;
+		return (J) this;
+	}
+
+	/**
+	 * Sets if must trigger on the input click
+	 * @return Always this
+	 */
 	@Override
 	@NotNull
 	@SuppressWarnings("unchecked")
