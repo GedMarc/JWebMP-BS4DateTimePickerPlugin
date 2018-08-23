@@ -19,7 +19,6 @@ package com.jwebmp.plugins.bs4datetimepicker;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
-import com.jwebmp.plugins.bs4datetimepicker.interfaces.BS4DateTimePickerFeatures;
 import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
 
 /**
@@ -30,8 +29,7 @@ import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
  * @since 2013/01/16
  */
 public class BS44DateTimePickerFeature
-		extends Feature<BS4DateTimePickerOptions, BS44DateTimePickerFeature>
-		implements BS4DateTimePickerFeatures, GlobalFeatures
+		extends Feature<GlobalFeatures, BS4DateTimePickerOptions, BS44DateTimePickerFeature>
 {
 
 	private static final long serialVersionUID = 1L;
