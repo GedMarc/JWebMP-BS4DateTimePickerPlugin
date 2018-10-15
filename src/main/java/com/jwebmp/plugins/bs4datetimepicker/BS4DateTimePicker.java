@@ -40,7 +40,7 @@ import javax.validation.constraints.NotNull;
  */
 @ComponentInformation(name = "BS 4 Date Time Picker",
 		description = "The Tempus Dominus Bootstrap Date Time Picker",
-		url = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin")
+		url = "https://github.com/GedMarc/JWebMP-BS4DateTimePickerPlugin")
 public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		extends BSFormInputGroup<J, InputTextType<?>>
 		implements IBS4DateTimePicker<J>
@@ -81,8 +81,11 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		{
 			Div inputGroupText = new Div();
 			inputGroupText.addClass("input-group-text");
-			if(calendarIcon != null)
-				inputGroupText.add(calendarIcon.setTiny(true).toString(0));
+			if (calendarIcon != null)
+			{
+				inputGroupText.add(calendarIcon.setTiny(true)
+				                               .toString(0));
+			}
 
 			getInput().addAttribute(ButtonAttributes.Data_Target.toString(), getID(true));
 			if (!hideButton)
@@ -109,7 +112,8 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	}
 
 	@Override
-	public @NotNull J setID(String id)
+	public @NotNull
+	J setID(String id)
 	{
 		return super.setID(id);
 	}
@@ -177,7 +181,10 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 	/**
 	 * Sets the calendar icon or null
-	 * @param calendarIcon The icon - nullbale
+	 *
+	 * @param calendarIcon
+	 * 		The icon - nullbale
+	 *
 	 * @return The calendar icon
 	 */
 	@NotNull
@@ -190,6 +197,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 	/**
 	 * Sets if must trigger on the input click
+	 *
 	 * @return Always this
 	 */
 	@Override

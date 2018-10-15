@@ -34,15 +34,15 @@ import javax.validation.constraints.NotNull;
 		pluginDependancyUniqueIDs = "jquery,bootstrap,moment,glyphicons",
 		pluginCategories = "bootstrap,web ui,ui,framework,date picker",
 		pluginSubtitle = "A Bootstrap 4 Date Time Picker with intuitive data transfer and customized calendar templates.",
-		pluginGitUrl = "https://github.com/GedMarc/JWebSwing-BSD4ateTimePickerPlugin",
+		pluginGitUrl = "https://github.com/GedMarc/JWebMP-BSD4ateTimePickerPlugin",
 		pluginSourceUrl = "https://tempusdominus.github.io/bootstrap-4/",
-		pluginWikiUrl = "https://github.com/GedMarc/JWebSwing-BS4DateTimePickerPlugin/wiki",
+		pluginWikiUrl = "https://github.com/GedMarc/JWebMP-BS4DateTimePickerPlugin/wiki",
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BS4DateTimePickerPlugin.jar/download",
 		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
 		pluginLastUpdatedDate = "2017/10/01")
 public class BS4DateTimePageConfigurator
-		implements IPageConfigurator
+		implements IPageConfigurator<BS4DateTimePageConfigurator>
 {
 	/**
 	 * If this configurator is enabled
