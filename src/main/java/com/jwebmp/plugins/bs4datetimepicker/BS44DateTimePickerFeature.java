@@ -32,7 +32,6 @@ public class BS44DateTimePickerFeature
 		extends Feature<GlobalFeatures, BS4DateTimePickerOptions, BS44DateTimePickerFeature>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	private BS4DateTimePickerOptions options;
 

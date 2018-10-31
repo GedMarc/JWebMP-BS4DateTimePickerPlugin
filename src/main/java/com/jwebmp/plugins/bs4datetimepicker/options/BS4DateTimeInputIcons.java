@@ -13,7 +13,7 @@ public class BS4DateTimeInputIcons<J extends BS4DateTimeInputIcons<J>>
 		extends JavaScriptPart<J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	/**
 	 * The time
 	 */

@@ -46,7 +46,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		implements IBS4DateTimePicker<J>
 {
 
-	private static final long serialVersionUID = 1L;
+
 	private BS44DateTimePickerFeature feature;
 
 	private boolean hideButton;
@@ -64,6 +64,13 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		addClass("date");
 		addAttribute("data-target-input", "nearest");
 		getInput().addClass("datetimepicker-input");
+	}
+
+	@NotNull
+	@Override
+	public InputTextType<?> getInput()
+	{
+		return super.getInput();
 	}
 
 	public static BS4DateTimePickerLinkFeature linkPickers(BS4DateTimePicker minPicker, BS4DateTimePicker maxPicker)
@@ -100,15 +107,15 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	}
 
 	@Override
-	public boolean equals(Object o)
-	{
-		return super.equals(o);
-	}
-
-	@Override
 	public int hashCode()
 	{
 		return super.hashCode();
+	}
+
+	@Override
+	public boolean equals(Object o)
+	{
+		return super.equals(o);
 	}
 
 	@Override
@@ -116,13 +123,6 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	J setID(String id)
 	{
 		return super.setID(id);
-	}
-
-	@NotNull
-	@Override
-	public InputTextType<?> getInput()
-	{
-		return super.getInput();
 	}
 
 	/**
@@ -174,6 +174,21 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		return (J) this;
 	}
 
+	/**
+	 * Sets if must trigger on the input click
+	 *
+	 * @return Always this
+	 */
+	@Override
+	@NotNull
+	@SuppressWarnings("unchecked")
+	public J setClickOnInput()
+	{
+		getInput().addAttribute("data-toggle", "datetimepicker");
+		getInput().addAttribute(ButtonAttributes.Data_Target.toString(), getInput().getID(true));
+		return (J) this;
+	}
+
 	public Italic getCalendarIcon()
 	{
 		return calendarIcon;
@@ -192,21 +207,6 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	public J setCalendarIcon(Italic calendarIcon)
 	{
 		this.calendarIcon = calendarIcon;
-		return (J) this;
-	}
-
-	/**
-	 * Sets if must trigger on the input click
-	 *
-	 * @return Always this
-	 */
-	@Override
-	@NotNull
-	@SuppressWarnings("unchecked")
-	public J setClickOnInput()
-	{
-		getInput().addAttribute("data-toggle", "datetimepicker");
-		getInput().addAttribute(ButtonAttributes.Data_Target.toString(), getInput().getID(true));
 		return (J) this;
 	}
 }

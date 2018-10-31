@@ -38,7 +38,6 @@ public class BS4DateTimePickerOptions<J extends BS4DateTimePickerOptions<J>>
 		extends JavaScriptPart<J>
 {
 
-	private static final long serialVersionUID = 1L;
 
 	/**
 	 * Takes string, Date, moment, null parameter and sets the components model current moment to it. Passing a null value unsets the
