@@ -1,14 +1,13 @@
-package com.jwebmp.plugins.bs4datetimepicker.options;
+package com.jwebmp.plugins.bs4.datetimepicker.options;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 
-public enum BS4DateTimeWidgetPositions
+public enum BS4DateTimeViewModes
 {
-	auto,
-	left,
-	right,
-	top,
-	bottom;
+	Decades,
+	Years,
+	Months,
+	Days;
 
 	@Override
 	@JsonValue

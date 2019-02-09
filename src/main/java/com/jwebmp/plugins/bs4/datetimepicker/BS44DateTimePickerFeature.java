@@ -14,12 +14,12 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker;
+package com.jwebmp.plugins.bs4.datetimepicker;
 
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
-import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
+import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
 /**
  * Adds on a ToolTip, String for custom text using header theme, Div for custom contents

@@ -14,21 +14,17 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
+package com.jwebmp.plugins.bs4.datetimepicker.interfaces;
 
-package com.jwebmp.plugins.bs4datetimepicker.options;
+import com.jwebmp.core.base.html.interfaces.events.GlobalEvents;
 
-import com.fasterxml.jackson.annotation.JsonValue;
-
-public enum BS4DateTimeToolbarPlacements
+/**
+ * @author GedMarc
+ * @version 1.0
+ * @since 07 Aug 2015
+ */
+public interface BS4DateTimePickerEvents
+		extends GlobalEvents
 {
-	Default,
-	Top,
-	Bottom;
 
-	@Override
-	@JsonValue
-	public String toString()
-	{
-		return name().toLowerCase();
-	}
 }

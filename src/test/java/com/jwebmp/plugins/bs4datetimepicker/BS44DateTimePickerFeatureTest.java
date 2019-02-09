@@ -17,6 +17,8 @@
 
 package com.jwebmp.plugins.bs4datetimepicker;
 
+import com.jwebmp.plugins.bs4.datetimepicker.BS44DateTimePickerFeature;
+import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
 import org.junit.jupiter.api.Test;
 
 public class BS44DateTimePickerFeatureTest

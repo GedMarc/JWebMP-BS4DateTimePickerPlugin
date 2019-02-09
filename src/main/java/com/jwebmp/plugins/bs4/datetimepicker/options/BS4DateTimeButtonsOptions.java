@@ -15,7 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.bs4datetimepicker.options;
+package com.jwebmp.plugins.bs4.datetimepicker.options;
 
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 

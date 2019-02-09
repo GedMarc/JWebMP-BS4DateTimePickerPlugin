@@ -15,10 +15,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.bs4datetimepicker.events;
+package com.jwebmp.plugins.bs4.datetimepicker.events;
 
 import com.jwebmp.core.Feature;
-import com.jwebmp.plugins.bs4datetimepicker.BS4DateTimePicker;
+import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
 
 /**
  * A client side feature for the date time picker

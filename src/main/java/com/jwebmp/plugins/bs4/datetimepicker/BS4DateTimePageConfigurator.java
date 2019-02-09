@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker;
+package com.jwebmp.plugins.bs4.datetimepicker;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
@@ -86,7 +86,7 @@ public class BS4DateTimePageConfigurator
 	@Override
 	public Page configure(Page page)
 	{
-		if (!page.isConfigured())
+		if (!page.isConfigured() && enabled())
 		{
 			JQueryPageConfigurator.setRequired(true);
 			page.getBody()

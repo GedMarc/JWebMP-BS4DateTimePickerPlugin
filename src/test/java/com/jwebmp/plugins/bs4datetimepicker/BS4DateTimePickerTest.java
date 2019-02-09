@@ -1,7 +1,8 @@
 package com.jwebmp.plugins.bs4datetimepicker;
 
 import com.jwebmp.plugins.bootstrap4.forms.groups.BSFormGroup;
-import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimeViewModes;
+import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
+import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimeViewModes;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;

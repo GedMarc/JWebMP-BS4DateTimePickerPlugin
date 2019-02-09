@@ -14,17 +14,18 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker.interfaces;
+package com.jwebmp.plugins.bs4.datetimepicker.interfaces;
 
-import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.core.base.ComponentBase;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 
 /**
  * @author GedMarc
  * @version 1.0
  * @since 07 Aug 2015
  */
-public interface BS4DateTimePickerFeatures
-		extends GlobalFeatures
+public interface BS4DateTimePickerChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
+		extends IComponentHierarchyBase<C, J>
 {
 
 }

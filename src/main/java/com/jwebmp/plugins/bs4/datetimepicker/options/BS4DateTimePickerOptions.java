@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker.options;
+package com.jwebmp.plugins.bs4.datetimepicker.options;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;

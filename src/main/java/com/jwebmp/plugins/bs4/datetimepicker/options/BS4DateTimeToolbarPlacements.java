@@ -14,18 +14,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker.interfaces;
 
-import com.jwebmp.core.base.ComponentBase;
-import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
+package com.jwebmp.plugins.bs4.datetimepicker.options;
 
-/**
- * @author GedMarc
- * @version 1.0
- * @since 07 Aug 2015
- */
-public interface BS4DateTimePickerChildren<C extends IComponentHierarchyBase, J extends ComponentBase>
-		extends IComponentHierarchyBase<C, J>
+import com.fasterxml.jackson.annotation.JsonValue;
+
+public enum BS4DateTimeToolbarPlacements
 {
+	Default,
+	Top,
+	Bottom;
 
+	@Override
+	@JsonValue
+	public String toString()
+	{
+		return name().toLowerCase();
+	}
 }

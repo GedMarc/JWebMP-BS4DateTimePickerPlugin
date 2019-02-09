@@ -1,14 +1,8 @@
-import com.jwebmp.core.services.IPageConfigurator;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
-import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
-import com.jwebmp.plugins.bs4datetimepicker.BS4DateTimePageConfigurator;
-import com.jwebmp.plugins.bs4datetimepicker.implementations.BS4DateTimePickerExclusionsModule;
-
 module com.jwebmp.plugins.bs4datetimepicker {
 	exports com.jwebmp.plugins.bs4datetimepicker;
-	exports com.jwebmp.plugins.bs4datetimepicker.events;
-	exports com.jwebmp.plugins.bs4datetimepicker.interfaces;
-	exports com.jwebmp.plugins.bs4datetimepicker.options;
+	exports com.jwebmp.plugins.bs4.datetimepicker.events;
+	exports com.jwebmp.plugins.bs4.datetimepicker.interfaces;
+	exports com.jwebmp.plugins.bs4.datetimepicker.options;
 
 	requires com.jwebmp.core;
 	requires com.jwebmp.logmaster;
@@ -24,7 +18,7 @@ module com.jwebmp.plugins.bs4datetimepicker {
 	provides IGuiceScanModuleExclusions with BS4DateTimePickerExclusionsModule;
 
 	opens com.jwebmp.plugins.bs4datetimepicker to com.fasterxml.jackson.databind, com.jwebmp.core;
-	opens com.jwebmp.plugins.bs4datetimepicker.interfaces to com.fasterxml.jackson.databind, com.jwebmp.core;
-	opens com.jwebmp.plugins.bs4datetimepicker.events to com.fasterxml.jackson.databind, com.jwebmp.core;
-	opens com.jwebmp.plugins.bs4datetimepicker.options to com.fasterxml.jackson.databind, com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4.datetimepicker.interfaces to com.fasterxml.jackson.databind, com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4.datetimepicker.events to com.fasterxml.jackson.databind, com.jwebmp.core;
+	opens com.jwebmp.plugins.bs4.datetimepicker.options to com.fasterxml.jackson.databind, com.jwebmp.core;
 }

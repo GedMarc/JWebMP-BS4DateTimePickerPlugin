@@ -15,11 +15,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package com.jwebmp.plugins.bs4datetimepicker.interfaces;
+package com.jwebmp.plugins.bs4.datetimepicker.interfaces;
 
 import com.jwebmp.core.base.interfaces.ICssStructure;
-import com.jwebmp.plugins.bs4datetimepicker.BS4DateTimePicker;
-import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
+import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
+import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
 import javax.validation.constraints.NotNull;
 

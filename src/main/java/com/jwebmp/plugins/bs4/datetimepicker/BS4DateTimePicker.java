@@ -14,7 +14,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
-package com.jwebmp.plugins.bs4datetimepicker;
+package com.jwebmp.plugins.bs4.datetimepicker;
 
 import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.Italic;
@@ -22,9 +22,9 @@ import com.jwebmp.core.base.html.attributes.ButtonAttributes;
 import com.jwebmp.core.base.html.inputs.InputTextType;
 import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.bootstrap4.forms.groups.sets.BSFormInputGroup;
-import com.jwebmp.plugins.bs4datetimepicker.events.BS4DateTimePickerLinkFeature;
-import com.jwebmp.plugins.bs4datetimepicker.interfaces.IBS4DateTimePicker;
-import com.jwebmp.plugins.bs4datetimepicker.options.BS4DateTimePickerOptions;
+import com.jwebmp.plugins.bs4.datetimepicker.events.BS4DateTimePickerLinkFeature;
+import com.jwebmp.plugins.bs4.datetimepicker.interfaces.IBS4DateTimePicker;
+import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
 import javax.validation.constraints.NotNull;
 

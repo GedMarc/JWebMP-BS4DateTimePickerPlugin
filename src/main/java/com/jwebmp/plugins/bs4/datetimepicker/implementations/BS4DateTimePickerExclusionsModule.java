@@ -1,4 +1,4 @@
-package com.jwebmp.plugins.bs4datetimepicker.implementations;
+package com.jwebmp.plugins.bs4.datetimepicker.implementations;
 
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions;
 import com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions;
