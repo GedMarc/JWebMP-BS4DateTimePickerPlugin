@@ -30,8 +30,8 @@ public enum BS4DateTimePickerReferencePool
 		implements ReferencePool
 {
 	TempusDominusReference(
-			new JavascriptReference("tempusdominusreference", 1.0, "tempus-dominus-bs4/build/js/tempusdominus-bootstrap-4.js"),
-			new CSSReference("tempusdominusreferencecss", 5.0, "tempus-dominus-bs4/build/css/tempusdominus-bootstrap-4.css"));
+			new JavascriptReference("tempusdominusreference", 1.0, "tempus-dominus-bs4/build/js/tempusdominus-bootstrap-4.min.js"),
+			new CSSReference("tempusdominusreferencecss", 5.0, "tempus-dominus-bs4/build/css/tempusdominus-bootstrap-4.min.css"));
 	/**
 	 * The actual javascript
 	 */
