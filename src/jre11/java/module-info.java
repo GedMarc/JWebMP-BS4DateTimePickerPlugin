@@ -1,5 +1,3 @@
-import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePageConfigurator;
-
 module com.jwebmp.plugins.bs4.datetimepicker {
 	exports com.jwebmp.plugins.bs4.datetimepicker;
 	exports com.jwebmp.plugins.bs4.datetimepicker.events;
@@ -14,7 +12,7 @@ module com.jwebmp.plugins.bs4.datetimepicker {
 	requires com.jwebmp.plugins.bootstrap4;
 	requires com.jwebmp.guicedinjection;
 
-	provides com.jwebmp.core.services.IPageConfigurator with BS4DateTimePageConfigurator;
+	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePageConfigurator;
 
 	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.bs4.datetimepicker.implementations.BS4DateTimePickerExclusionsModule;
 	provides com.jwebmp.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.bs4.datetimepicker.implementations.BS4DateTimePickerExclusionsModule;
