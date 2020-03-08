@@ -14,7 +14,6 @@ module com.jwebmp.plugins.bs4.datetimepicker {
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePageConfigurator;
 
-	provides com.guicedee.guicedinjection.interfaces.IGuiceScanJarExclusions with com.jwebmp.plugins.bs4.datetimepicker.implementations.BS4DateTimePickerExclusionsModule;
 	provides com.guicedee.guicedinjection.interfaces.IGuiceScanModuleExclusions with com.jwebmp.plugins.bs4.datetimepicker.implementations.BS4DateTimePickerExclusionsModule;
 
 	opens com.jwebmp.plugins.bs4.datetimepicker to com.fasterxml.jackson.databind, com.jwebmp.core;
