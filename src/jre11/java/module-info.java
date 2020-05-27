@@ -6,7 +6,6 @@ module com.jwebmp.plugins.bs4.datetimepicker {
 
 	requires com.jwebmp.core;
 	requires com.guicedee.logmaster;
-	requires com.fasterxml.jackson.annotation;
 
 	requires java.validation;
 	requires com.jwebmp.plugins.bootstrap4;
