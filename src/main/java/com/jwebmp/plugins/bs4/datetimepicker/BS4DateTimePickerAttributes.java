@@ -19,6 +19,7 @@ package com.jwebmp.plugins.bs4.datetimepicker;
 import com.jwebmp.core.base.html.interfaces.AttributeDefinitions;
 import com.jwebmp.core.utilities.StaticStrings;
 
+import static com.guicedee.guicedinjection.json.StaticStrings.*;
 import static com.jwebmp.core.utilities.StaticStrings.*;
 
 /**
@@ -58,7 +59,7 @@ public enum BS4DateTimePickerAttributes
 	public String toString()
 	{
 		return name().toLowerCase()
-		             .replace(StaticStrings.CHAR_UNDERSCORE, CHAR_DASH)
-		             .replace("$", "");
+		             .replace(CHAR_UNDERSCORE, CHAR_DASH)
+		             .replace(STRING_DOLLAR,STRING_EMPTY);
 	}
 }
