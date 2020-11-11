@@ -19,7 +19,7 @@ package com.jwebmp.plugins.bs4.datetimepicker.options;
 
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * The bootstrap 4 options for the date time button

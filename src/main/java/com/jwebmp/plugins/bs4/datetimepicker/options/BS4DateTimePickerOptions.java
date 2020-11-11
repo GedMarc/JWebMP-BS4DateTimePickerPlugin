@@ -19,7 +19,7 @@ package com.jwebmp.plugins.bs4.datetimepicker.options;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.Set;

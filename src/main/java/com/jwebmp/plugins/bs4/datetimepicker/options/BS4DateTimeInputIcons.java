@@ -2,7 +2,7 @@ package com.jwebmp.plugins.bs4.datetimepicker.options;
 
 import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * Class names of the given items

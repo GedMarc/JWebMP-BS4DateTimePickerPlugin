@@ -26,7 +26,7 @@ import com.jwebmp.plugins.bs4.datetimepicker.events.BS4DateTimePickerLinkFeature
 import com.jwebmp.plugins.bs4.datetimepicker.interfaces.IBS4DateTimePicker;
 import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 /**
  * An implementation of

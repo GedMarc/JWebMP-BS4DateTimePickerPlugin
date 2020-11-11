@@ -21,7 +21,7 @@ import com.jwebmp.core.base.interfaces.ICssStructure;
 import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
 import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
-import javax.validation.constraints.NotNull;
+import jakarta.validation.constraints.NotNull;
 
 public interface IBS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		extends ICssStructure<J>
