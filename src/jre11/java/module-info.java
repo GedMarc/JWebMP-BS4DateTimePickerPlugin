@@ -7,7 +7,7 @@ module com.jwebmp.plugins.bs4.datetimepicker {
 	requires com.jwebmp.core;
 	requires com.guicedee.logmaster;
 
-	requires java.validation;
+	requires jakarta.validation;
 	requires com.jwebmp.plugins.bootstrap4;
 	requires com.guicedee.guicedinjection;
 
