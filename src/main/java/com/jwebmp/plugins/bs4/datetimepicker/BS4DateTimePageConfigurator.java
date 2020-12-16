@@ -18,6 +18,7 @@ package com.jwebmp.plugins.bs4.datetimepicker;
 
 import com.jwebmp.core.Page;
 import com.jwebmp.core.plugins.PluginInformation;
+import com.jwebmp.core.plugins.PluginStatus;
 import com.jwebmp.core.plugins.jquery.JQueryPageConfigurator;
 import com.jwebmp.core.services.IPageConfigurator;
 
@@ -30,7 +31,7 @@ import jakarta.validation.constraints.NotNull;
 @PluginInformation(pluginName = "BS 4 Date Time Picker",
 		pluginUniqueName = "bootstrap4-datepicker",
 		pluginDescription = "Bootstrap 4 datetime picker directive styled by Twitter Bootstrap",
-		pluginVersion = "BS 4b1",
+		pluginVersion = "4.17.47",
 		pluginDependancyUniqueIDs = "jquery,bootstrap,moment,glyphicons",
 		pluginCategories = "bootstrap,web ui,ui,framework,date picker",
 		pluginSubtitle = "A Bootstrap 4 Date Time Picker with intuitive data transfer and customized calendar templates.",
@@ -40,7 +41,12 @@ import jakarta.validation.constraints.NotNull;
 		pluginDownloadUrl = "https://sourceforge.net/projects/jwebswing/files/plugins/BS4DateTimePickerPlugin.jar/download",
 		pluginIconUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_icon.png",
 		pluginIconImageUrl = "bower_components/angular-bootstrap-datetimepicker/date_time_picker_logo.jpg",
-		pluginLastUpdatedDate = "2017/10/01")
+		pluginLastUpdatedDate = "2020/12/15",
+		pluginGroupId = "com.jwebmp.plugins.bootstrap",
+		pluginArtifactId = "jwebmp-bootstrap-date-time-picker",
+		pluginModuleName = "com.jwebmp.plugins.bs4.datetimepicker",
+		pluginStatus = PluginStatus.Released
+)
 public class BS4DateTimePageConfigurator
 		implements IPageConfigurator<BS4DateTimePageConfigurator>
 {

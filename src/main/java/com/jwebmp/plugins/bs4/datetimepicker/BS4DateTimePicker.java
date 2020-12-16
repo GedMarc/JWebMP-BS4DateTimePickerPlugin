@@ -20,6 +20,7 @@ import com.jwebmp.core.base.html.Div;
 import com.jwebmp.core.base.html.Italic;
 import com.jwebmp.core.base.html.attributes.ButtonAttributes;
 import com.jwebmp.core.base.html.inputs.InputTextType;
+import com.jwebmp.core.base.interfaces.IIcon;
 import com.jwebmp.core.plugins.ComponentInformation;
 import com.jwebmp.plugins.bootstrap4.forms.groups.sets.BSFormInputGroup;
 import com.jwebmp.plugins.bs4.datetimepicker.events.BS4DateTimePickerLinkFeature;
@@ -51,7 +52,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 
 	private boolean hideButton;
 
-	private Italic calendarIcon;
+	private IIcon<?,?> calendarIcon;
 
 	/**
 	 * Constructs a new instance
@@ -90,7 +91,8 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 			inputGroupText.addClass("input-group-text");
 			if (calendarIcon != null)
 			{
-				inputGroupText.add(calendarIcon.setTiny(true)
+				inputGroupText.add(calendarIcon.asHierarchyBase()
+				                               .setTiny(true)
 				                               .toString(0));
 			}
 
@@ -189,7 +191,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		return (J) this;
 	}
 
-	public Italic getCalendarIcon()
+	public IIcon<?,?> getCalendarIcon()
 	{
 		return calendarIcon;
 	}
@@ -204,7 +206,7 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	 */
 	@NotNull
 	@SuppressWarnings("unchecked")
-	public J setCalendarIcon(Italic calendarIcon)
+	public J setCalendarIcon(IIcon<?,?> calendarIcon)
 	{
 		this.calendarIcon = calendarIcon;
 		return (J) this;

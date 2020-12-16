@@ -32,9 +32,8 @@ public interface IBS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	 * @return
 	 */
 	@NotNull
-	@SuppressWarnings("unchecked")
+	
 	J setDateOnly();
-
 	BS4DateTimePickerOptions<?> getOptions();
 
 	/**
@@ -43,7 +42,7 @@ public interface IBS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	 * @return
 	 */
 	@NotNull
-	@SuppressWarnings("unchecked")
+	
 	J setTimeOnly();
 
 	/**
@@ -52,10 +51,10 @@ public interface IBS4DateTimePicker<J extends BS4DateTimePicker<J>>
 	 * @return
 	 */
 	@NotNull
-	@SuppressWarnings("unchecked")
+	
 	J setNoIcon();
 
 	@NotNull
-	@SuppressWarnings("unchecked")
+	
 	J setClickOnInput();
 }

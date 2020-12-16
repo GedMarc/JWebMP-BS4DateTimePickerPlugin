@@ -19,6 +19,7 @@ package com.jwebmp.plugins.bs4.datetimepicker;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.Feature;
 import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.core.base.interfaces.IComponentHierarchyBase;
 import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
 
 /**
@@ -29,11 +30,9 @@ import com.jwebmp.plugins.bs4.datetimepicker.options.BS4DateTimePickerOptions;
  * @since 2013/01/16
  */
 public class BS44DateTimePickerFeature
-		extends Feature<GlobalFeatures, BS4DateTimePickerOptions, BS44DateTimePickerFeature>
+		extends Feature<GlobalFeatures, BS4DateTimePickerOptions<?>, BS44DateTimePickerFeature>
 {
-
-
-	private BS4DateTimePickerOptions options;
+	private BS4DateTimePickerOptions<?> options;
 
 	/**
 	 * Constructs a new Tooltip ComponentFeatureBase for a component. Adds the tooltip text as the Title attribute to the component
@@ -41,7 +40,7 @@ public class BS44DateTimePickerFeature
 	 *
 	 * @param forComponent
 	 */
-	public BS44DateTimePickerFeature(Component forComponent)
+	public BS44DateTimePickerFeature(IComponentHierarchyBase<?,?> forComponent)
 	{
 		super("BS4DateTimePickerFeature");
 		setComponent(forComponent);
@@ -66,11 +65,11 @@ public class BS44DateTimePickerFeature
 	 * @return
 	 */
 	@Override
-	public BS4DateTimePickerOptions getOptions()
+	public BS4DateTimePickerOptions<?> getOptions()
 	{
 		if (options == null)
 		{
-			options = new BS4DateTimePickerOptions();
+			options = new BS4DateTimePickerOptions<>();
 		}
 		return options;
 	}
@@ -78,7 +77,7 @@ public class BS44DateTimePickerFeature
 	@Override
 	public void assignFunctionsToComponent()
 	{
-		String requiredString = getComponent().getJQueryID() + "datetimepicker(";
+		String requiredString = getComponent().asBase().getJQueryID() + "datetimepicker(";
 		requiredString += getOptions().toString();
 		requiredString += ");" + getNewLine();
 		addQuery(requiredString);

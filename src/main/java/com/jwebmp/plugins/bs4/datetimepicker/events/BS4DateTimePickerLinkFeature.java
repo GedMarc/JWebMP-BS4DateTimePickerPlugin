@@ -18,13 +18,15 @@
 package com.jwebmp.plugins.bs4.datetimepicker.events;
 
 import com.jwebmp.core.Feature;
+import com.jwebmp.core.base.html.interfaces.GlobalFeatures;
+import com.jwebmp.core.htmlbuilder.javascript.JavaScriptPart;
 import com.jwebmp.plugins.bs4.datetimepicker.BS4DateTimePicker;
 
 /**
  * A client side feature for the date time picker
  */
 public class BS4DateTimePickerLinkFeature
-		extends Feature
+		extends Feature<GlobalFeatures, JavaScriptPart<?>,BS4DateTimePickerLinkFeature>
 {
 	private final BS4DateTimePicker<?> dateTimePickerMin;
 	private final BS4DateTimePicker dateTimePickerMax;
