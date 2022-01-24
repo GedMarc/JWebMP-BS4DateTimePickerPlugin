@@ -46,8 +46,6 @@ public class BS4DateTimePicker<J extends BS4DateTimePicker<J>>
 		extends BSFormInputGroup<J, InputTextType<?>>
 		implements IBS4DateTimePicker<J>
 {
-
-
 	private BS44DateTimePickerFeature feature;
 
 	private boolean hideButton;
